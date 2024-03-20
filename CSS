@@ -1,1 +1,2710 @@
+ANIMATION CSS:
+=============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animations</title>
+	<style type="text/css">
+		img
+		{
+			position: relative;
+			animation-name: bhu;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			animation-delay: 1s;
+		}
+		@keyframes bhu
+		{
+			from{left:0px; top:0px;}
+			to{left:1000px; top:450px;}
+		}
+	</style>
+</head>
+<body>
+	<img src="f:/images/beetroot.jpg">
 
+
+</body>
+</html>
+
+ANIMATION CSS 1:
+===============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animations</title>
+	<style type="text/css">
+		img
+		{
+			position: relative;
+			animation-name: bhu;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			
+		}
+		@keyframes bhu
+		{
+			from{left:0px; top:0px;}
+			to{left:1000px; top:0px;}
+		}
+	</style>
+</head>
+<body>
+	<img src="f:/images/birds.jpg">
+
+
+</body>
+</html>
+
+ANIMATION CSS 2:
+===============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animations</title>
+	<style type="text/css">
+		div
+		{
+			position: relative;
+			animation-name: bhu;
+			animation-duration: 9s;
+			animation-iteration-count: infinite;
+			animation-delay: 3s;
+		}
+		@keyframes bhu
+		{
+			from{left:0px; top:0px;}
+			to{left:1000px; top:0px;}
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<img src="f:/images/strawberry.jpg">
+    <h1>strawberry is red colour</h1>
+</div>
+
+</body>
+</html>
+
+ANIMATION CSS 3:
+===============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animations</title>
+	<style type="text/css">
+		div
+		{
+			position: relative;
+			animation-name: bhu;
+			animation-duration: 7s;
+			animation-iteration-count: infinite;
+			animation-delay: 1s;
+		}
+		@keyframes bhu
+		{
+			from{left:0px; top:0px;}
+			to{left:1000px; top:500px;}
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<img src="f:/images/black grapes.jpg">
+	<h1>Grapes is very tasty</h1>
+</div>
+
+
+</body>
+</html>
+
+ANIMATION:
+=========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animations</title>
+	<style type="text/css">
+		img
+		{
+			position: relative;
+			animation-name: bhu;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-delay: 2s;
+		}
+		@keyframes bhu
+		{
+			from{left:0px; top:0px;}
+			to{left:1000px; top:0px;}
+		}
+	</style>
+</head>
+<body>
+	<img src="f:/images/carrot.jpg">
+
+
+</body>
+</html>
+
+BACKGROUND IMAGE:
+================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Background Image</title>
+	<style type="text/css">
+		#but1
+		{
+			background-image: url("f:/images/rose.jpg");
+			height: 100px;
+			width: 200px;
+			background-size: cover;
+			border-radius: 30px;
+			cursor: pointer;
+			font-size: 30px;
+			font-weight: bold;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<input id="but1" type="button" value="clickme">
+
+</body>
+</html>
+
+BACKGROUND-REPEAT AND BACKGROUND-SIZE:
+======================================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Background-Repeat and Background-size</title>
+	<style type="text/css">
+		div
+		{
+           background-image: url("f:/images/twitter.png");
+           width: 900px;
+           height: 800px;
+           background-repeat: repeat;
+           border: 5px ridge green;
+
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+
+</body>
+</html>
+
+BACKGROUND-REPEAT AND BACKGROUND-SIZE 1:
+========================================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Background-Repeat and Background-size</title>
+	<style type="text/css">
+		div
+		{
+           background-image: url("f:/images/twitter.png");
+           width: 800px;
+           height: 700px;
+           background-repeat: no-repeat;
+           border: 5px ridge green;
+           background-size: cover;
+
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+
+</body>
+</html>
+
+BACKGROUND-REPEAT AND BACKGROUND-SIZE 2:
+=======================================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Background-Repeat and Background-size</title>
+	<style type="text/css">
+		div
+		{
+           background-image: url("f:/images/twitter.png");
+           width: 800px;
+           height: 800px;
+           background-repeat: repeat-y;
+           border: 5px ridge green;
+          
+
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+
+</body>
+</html>
+
+BACKGROUND-REPEAT AND BACKGROUND-SIZE 3:
+=======================================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Background-Repeat and Background-size</title>
+	<style type="text/css">
+		div
+		{
+           background-image: url("f:/images/twitter.png");
+           width: 800px;
+           height: 400px;
+           background-repeat: repeat-x;
+           border: 5px ridge green;
+          
+
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+
+</body>
+</html>
+
+BOX-SHADOW:
+==========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Box-Shadow</title>
+	<style type="text/css">
+		#subdiv
+		{
+			width: 400px;
+			height: 400px;
+			background-color: pink;
+			border: 3px solid black;
+			border-radius: 35px;
+			margin-top: 50px;
+			box-shadow: 10px 15px 10px 5px black;
+			opacity: .6;
+		}
+		#maindiv
+		{
+			position: fixed;
+			margin-top: 50px;
+			width: 100%;
+			background-color: yellow;
+			height: 500px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div align="center" id="maindiv">
+		<div align="center" id="subdiv">
+			<h2>Login Form</h2>
+			
+		</div>
+		
+
+	</div>
+
+</body>
+</html>
+
+CLASS SELECTOR:
+==============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>class selector</title>
+	<style type="text/css">
+		h1
+		{
+			background-color: green;
+			font-size: 30px;
+			height: 50px;
+			text-align: center;
+			background-color: green;
+			border-radius: 5px;
+			color: orange; 
+		}
+		#head2
+		{
+			background-color: red;
+		}
+		#head4
+		{
+			color: blue;
+			background-color: pink;
+		}
+		.mycla
+		{
+			border-radius: 5px;
+			background-color: yellow;
+			color: orange;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1 id="head1"> rabbit</h1>
+	<h1 id="head2"> rabbit</h1>
+	<h1 id="head3"> rabbit</h1>
+	<h1 id="head4"> rabbit</h1>
+	<h1 id="head5" class="mycla"> rabbit</h1>
+
+</body>
+</html>
+
+CLASS SELECTOR 1:
+================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>class selector</title>
+	<style type="text/css">
+		h1
+		{
+			background-color:green;
+			font-size: 30px;
+			color: white;
+			height: 50px;
+			text-align: center;
+			
+		}
+		#head2
+		{
+			background-color: red;
+		}
+		#head4
+		{
+			color: blue;
+			background-color: pink;
+		}
+		#head5
+		{
+			border-radius: 50px; 
+			background-color: black;
+			color: white;
+        }
+	</style>
+</head>
+<body>
+	<h1 id="head1"> rabbit</h1>
+	<h1 id="head2"> rabbit</h1>
+	<h1 id="head3"> rabbit</h1>
+	<h1 id="head4"> rabbit</h1>
+	<h1 id="head5"> rabbit</h1>
+
+</body>
+</html>
+
+CSS LINKS:
+=========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Links</title>
+	<style type="text/css">
+		a
+		{
+			text-decoration: none;
+			color: white;
+		
+		}
+		a:link
+		{
+			background-color: green;
+        }
+        a:visited
+        {
+        	background-color: red;
+        }
+        a:hover
+        {
+        	background-color: yellow;
+        }
+        a:active
+        {
+        	background-color: blue;
+        }
+	</style>
+</head>
+<body>
+	<a href="inline css.html">clickme</a>
+
+</body>
+</html>
+
+CSS LINKS 1:
+===========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Links</title>
+	<style type="text/css">
+		a
+		{
+			text-decoration: none;
+			color: white;
+			border: 1px solid red;
+			
+		
+		}
+		a:link
+		{
+			background-color: green;
+        }
+        a:visited
+        {
+        	background-color: red;
+        }
+        a:hover
+        {
+        	background-color: yellow;
+        }
+        a:active
+        {
+        	background-color: blue;
+        }
+	</style>
+</head>
+<body>
+	<a href="inline css.html">clickme</a>
+
+</body>
+</html>
+
+CSS LINKS 2:
+===========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Links</title>
+	<style type="text/css">
+		a
+		{
+			text-decoration: none;
+			color: white;
+			border: 1px solid red;
+			border:inset;
+		
+		}
+		a:link
+		{
+			background-color: green;
+        }
+        a:visited
+        {
+        	background-color: red;
+        }
+        a:hover
+        {
+        	background-color: yellow;
+        }
+        a:active
+        {
+        	background-color: blue;
+        }
+	</style>
+</head>
+<body>
+	<a href="inline css.html">clickme</a>
+
+</body>
+</html>
+
+CSS LINKS 3:
+===========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Links</title>
+	<style type="text/css">
+		a
+		{
+			text-decoration: none;
+			color: white;
+			border: 1px solid red;
+			border:outset;
+		
+		}
+		a:link
+		{
+			background-color: green;
+        }
+        a:visited
+        {
+        	background-color: red;
+        }
+        a:hover
+        {
+        	background-color: yellow;
+        }
+        a:active
+        {
+        	background-color: blue;
+        }
+	</style>
+</head>
+<body>
+	<a href="inline css.html">clickme</a>
+
+</body>
+</html>
+
+DISPLAY BLOCK:
+=============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display Block</title>
+	<style type="text/css">
+		img
+		{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<img src="f:/images/tomato.jpg">
+	<img src="f:/images/black double grapes.jpg">
+	<img src="f:/images/double strawberry.jpg">
+
+
+</body>
+</html>
+
+DISPLAY INLINE:
+==============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display Inline</title>
+	<style type="text/css">
+		h2
+		{
+			display: inline;
+		}
+	</style>
+</head>
+<body>
+	<h2>red cherry</h2>
+	<h2>papaya</h2>
+	<h2>lady's finger</h2>
+	<h2>cauli flower</h2>
+	<h2>onion</h2>
+
+</body>
+</html>
+
+DOUBLE COLOR CSS:
+================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOUBLE COLOR</title>
+	<style type="text/css">
+		#subdiv
+		{
+			width: 400px;
+			height: 400px;
+			background-color: pink;
+			border: 3px solid black;
+			border-radius: 35px;
+			margin-top: 50px;
+			background: radial-gradient(pink,yellow,blue,black);
+			background-image: url("f:/images/double tomato.jpg");
+			background-size: cover;
+			box-shadow: 10px 15px 10px 5px black;
+			opacity: .5;
+		}
+		#maindiv
+		{
+			position: fixed;
+			margin-top: 50px;
+			width: 100%;
+			background: linear-gradient(pink,yellow,blue,black,red);
+			height: 500px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div align="center" id="maindiv">
+		<div align="center" id="subdiv">
+			<h2>Login Form</h2>
+			
+		</div>
+		
+
+	</div>
+
+</body>
+</html>
+
+DROP-DOWN LIST BASIC:
+====================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drop-down List Basic</title>
+	<style type="text/css">
+		#menuitem a
+		{
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			background-color: green;
+		}
+		#menuitem
+		{
+			display: none;
+		}
+		#menu
+		{
+			display: inline-block;
+		}
+		#menu:hover #menuitem
+		{
+			display: block;
+
+		}
+	</style>
+</head>
+<body>
+     <div id="menu">
+     	<button>dropdown button</button>
+     	<div id="menuitem">
+     		<a href="#">Home</a>
+     		<a href="#">Records</a>
+     		<a href="#">Contact Us</a>
+     		<a href="#">Report</a>
+     		<a href="#">Help</a>
+     		<a href="#">Data</a>
+     		
+     	</div>
+     	
+     </div>
+</body>
+</html>
+
+DROP-DOWN LIST ADVANCED:
+=======================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drop-down List Advanced</title>
+	<style type="text/css">
+		#menuitem a
+		{
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			background-color: green;
+			border-radius: 30px;
+			margin-top: 3px;
+			color: yellow;
+		}
+		#menuitem a:hover
+		{
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			background-color: rgb(111,11,222,.5);
+			border-radius: 30px;
+			margin-top: 3px;
+			color: rgb(0,111,222);
+			border: 2px solid rgb(111,134,113);
+		}
+		#menuitem
+		{
+			display: none;
+		}
+		#menu
+		{
+			display: inline-block;
+		}
+		#menu:hover #menuitem
+		{
+			display: block;
+
+		}
+		button
+		{
+			background-color: yellow;
+			color: red;
+			border: none;
+			outline: none;
+			border-radius: 10px 0 10px 0;
+			border: 3px solid red;
+			height: 35px;
+		}
+		button:hover
+		{
+			background-color: red;
+			color: yellow;
+			border: none;
+			outline: none;
+			border-radius: 10px 0 10px 0;
+			border: 3px solid yellow;
+			height: 35px;
+		}
+	</style>
+</head>
+<body>
+     <div id="menu">
+     	<button>dropdown button</button>
+     	<div id="menuitem">
+     		<a href="#">Home</a>
+     		<a href="#">Records</a>
+     		<a href="#">Contact Us</a>
+     		<a href="#">Report</a>
+     		<a href="#">Help</a>
+     		<a href="#">Data</a>
+     		
+     	</div>
+     	
+     </div>
+</body>
+</html>
+
+EXTERNAL CSS:
+============
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bhu.css">
+	<style type="text/css">
+		h1
+		{
+			background-color: yellow;
+			color: red;
+			font-size: 30px;
+			border: 5px solid green;
+		}
+	</style>
+	<title> EC</title>
+</head>
+<body>
+	<h1 style="background-color: green;color: white;"> I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+
+</body>
+</html>
+
+EXTERNAL CSS 1:
+==============
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bhu.css">
+	<style type="text/css">
+		h1
+		{
+			background-color: yellow;
+			color: red;
+			font-size: 30px;
+			border: 5px dashed green;
+		}
+	</style>
+	<title> EC</title>
+</head>
+<body>
+	<h1 style="background-color: green;color: white;"> I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+
+</body>
+</html>
+
+EXTERNAL CSS 2:
+==============
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bhu.css">
+	<style type="text/css">
+		h1
+		{
+			background-color: yellow;
+			color: red;
+			font-size: 30px;
+			border: 5px dotted green;
+		}
+	</style>
+	<title> EC</title>
+</head>
+<body>
+	<h1 style="background-color: green;color: white;"> I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+
+</body>
+</html>
+
+FONT:
+====
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Font</title>
+	<style type="text/css">
+		p
+		{
+			font-size: 30px;
+			color: red;
+			text-transform: uppercase;
+			text-align: justify;
+			font-weight: bold;
+			font-style: italic;
+			text-decoration: underline;
+			background-color: yellow;
+			font-family: algerian;
+			border: 10px solid blue;
+			letter-spacing: 1px;
+			word-spacing: 20px; 
+		}
+	</style>
+</head>
+<body>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+</body>
+</html>
+
+ID CSS:
+======
+<!DOCTYPE html>
+<html>
+<head>
+	<title>id selector</title>
+	<style type="text/css">
+		h1
+		{
+			background-color: green;
+			font-size: 30px;
+			color: white;
+			height: 50px;
+			text-align: center; 
+		}
+		#head2
+		{
+			background-color:red;
+		}
+		#head4
+		{
+			color: blue;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="head1"> rabbit</h1>
+	<h1 id="head2"> rabbit</h1>
+	<h1 id="head3"> rabbit</h1>
+	<h1 id="head4"> rabbit</h1>
+	<h1 id="head5"> rabbit</h1>
+
+</body>
+</html>
+
+INLINE BLOCK CSS:
+================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inline block</title>
+	<style type="text/css">
+		#ib
+		{
+			background-color: green;
+			display: inline-block;
+		}
+		div a
+		{
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="ib">
+		<a href="#">Tree</a>
+		<a href="#">Plant</a>
+		<a href="#">Leaf</a>
+		<a href="#">Root</a>
+		<a href="#">Stem</a>
+
+		
+	</div>
+
+</body>
+</html>
+
+INLINE CSS:
+==========
+<!DOCTYPE html>
+<html>
+<head>
+	<title> IC</title>
+</head>
+<body>
+	<h1 style="background-color: green;color: white;"> I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+
+</body>
+</html>
+
+INTERNAL CSS:
+============
+<!DOCTYPE html>
+<html>
+<head>
+	<title> INTC</title>
+	<style type="text/css">
+		h1
+		{
+			background-color: yellow;
+			color: red;
+			font-size: 30px;
+			border: 5px solid green;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 style="background-color: green;color: white;"> I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+	<h1>I like carrot</h1>
+
+</body>
+</html>
+
+LINE HEIGHT:
+===========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Line Height</title>
+	<style type="text/css">
+		input
+		{
+			line-height: 50px;
+			margin-top: 10px;
+			display: block; 
+		}
+	</style>
+</head>
+<body>
+	<input type="text">
+	<input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+
+
+</body>
+</html>
+
+MARGIN CSS:
+==========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Margin</title>
+	<style type="text/css">
+		p
+		{
+			/*padding:10px;*/
+			padding-top: 10px;
+			padding-right: 20px;
+			text-align: justify;
+			margin: 50px;
+			  /*margin-left:25px;
+              margin-right:25px;
+              margin-top:25px;
+              margin-bottom:25px;*/
+              border: 1px solid green;
+              outline-offset: 10px;
+              outline-color: blue;
+              outline-style: ridge;
+              outline-width: 10px;
+		}
+	</style>
+</head>
+<body>
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<hr>
+
+
+</body>
+</html>
+
+MULTI LIST CSS:
+==============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drop-down List Advanced</title>
+	<style type="text/css">
+		#menuitem a
+		{
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			background-color: green;
+			border-radius: 30px;
+			margin-top: 3px;
+			color: yellow;
+		}
+		#menuitem a:hover
+		{
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			background-color: rgb(111,11,222,.5);
+			border-radius: 30px;
+			margin-top: 3px;
+			color: rgb(0,111,222);
+			border: 2px solid rgb(111,134,113);
+		}
+		#menuitem
+		{
+			display: none;
+		}
+		#menu
+		{
+			display: inline-block;
+		}
+		#menu:hover #menuitem
+		{
+			display: block;
+
+		}
+		button
+		{
+			background-color: yellow;
+			color: red;
+			border: none;
+			outline: none;
+			border-radius: 10px 0 10px 0;
+			border: 3px solid red;
+			height: 35px;
+		}
+		button:hover
+		{
+			background-color: red;
+			color: yellow;
+			border: none;
+			outline: none;
+			border-radius: 10px 0 10px 0;
+			border: 3px solid yellow;
+			height: 35px;
+		}
+		#multilist
+		{
+			display: none;
+		}
+		#multilist a
+		{
+			color: blue;
+			background-color: pink;
+			margin-left: 20px;
+		}
+		#multimenu:hover #multilist
+		{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+     <div id="menu">
+     	<button>dropdown button</button>
+     	<div id="menuitem">
+     		<a href="#">Home</a>
+     		<a href="#">Records</a>
+     		<a href="#">Contact Us</a>
+     		<a href="#">Report</a>
+     		<div id="multimenu">
+     		<a href="#">Help</a>
+     		<div id="multilist">
+     			<a href="#">help 1</a>
+     			<a href="#">help 2</a>
+     			<a href="#">help 3</a>
+     			<a href="#">help 4</a>
+     			<a href="#">help 5</a>
+     		</div>
+     	</div>
+
+     		<a href="#">Data</a>
+     		
+     	</div>
+     	
+     </div>
+</body>
+</html>
+
+NESTED CSS:
+==========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nested selector</title>
+	<style type="text/css">
+		div p
+		{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>I want egg rice today</p>
+		<p>I want tomato rice today</p>
+		<center><p>I want chicken rice today</p></center>
+		<p>I want lemon rice today</p>
+		<p>I want coconut rice today</p>
+		<hr>
+	</div>
+	<p>I want coconut milk rice</p>
+	<p>I want curd rice</p>
+	<p>I want fried rice</p>
+
+	
+
+
+</body>
+</html>
+
+NESTED CSS 1:
+============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nested selector</title>
+	<style type="text/css">
+		div>p
+		{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>I want egg rice today</p>
+		<p>I want tomato rice today</p>
+		<center><p>I want chicken rice today</p></center>
+		<p>I want lemon rice today</p>
+		<p>I want coconut rice today</p>
+		<hr>
+	</div>
+	<p>I want coconut milk rice</p>
+	<p>I want curd rice</p>
+	<p>I want fried rice</p>
+	</body>
+</html>
+
+NESTED CSS 2:
+============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nested selector</title>
+	<style type="text/css">
+		div+p
+		{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>I want egg rice today</p>
+		<p>I want tomato rice today</p>
+		<center><p>I want chicken rice today</p></center>
+		<p>I want lemon rice today</p>
+		<p>I want coconut rice today</p>
+		<hr>
+	</div>
+	<p>I want coconut milk rice</p>
+	<p>I want curd rice</p>
+	<p>I want fried rice</p>
+	</body>
+</html>
+
+NESTED CSS 3:
+============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nested selector</title>
+	<style type="text/css">
+		div~p
+		{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>I want egg rice today</p>
+		<p>I want tomato rice today</p>
+		<center><p>I want chicken rice today</p></center>
+		<p>I want lemon rice today</p>
+		<p>I want coconut rice today</p>
+		<hr>
+	</div>
+	<p>I want coconut milk rice</p>
+	<p>I want curd rice</p>
+	<p>I want fried rice</p>
+	</body>
+</html>
+
+OPACITY CSS:
+===========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opacity</title>
+	<style type="text/css">
+		#img2
+		{
+			opacity: .78;
+		}
+	</style>
+</head>
+<body>
+	
+	<img id="img1" src="f:/images/rose.jpg">
+	<img id="img2" src="f:/images/rose.jpg">
+	<hr>
+
+</body>
+</html>
+
+POSITION CSS:
+============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Position 2</title>
+	<style type="text/css">
+		img
+		{
+			position: absolute;
+			left: 100px;
+			top: 50px;
+			z-index: -1;
+
+        }
+	</style>
+</head>
+<body>
+	<p align="justify">
+		<font size="5">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</font>
+		
+	</p>
+	<img src="f:/images/cherry.jpg">
+	<p align="justify">
+		<font size="6">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</font>
+		
+	</p>
+
+</body>
+</html>
+POSITION CSS 1:
+==============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Position 3</title>
+	<style type="text/css">
+		img
+		{
+			position: fixed;
+			left: 100px;
+			top: 50px;
+			z-index: -1;
+
+        }
+	</style>
+</head>
+<body>
+	<p align="justify">
+		<font size="5">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</font>
+		
+	</p>
+	<img src="f:/images/cherry.jpg">
+	<p align="justify">
+		<font size="6">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</font>
+		
+	</p>
+
+</body>
+</html>
+
+POSITION CSS 2:
+==============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Position 4</title>
+	<style type="text/css">
+		img
+		{
+			position: relative;
+			left: 100px;
+			top: 50px;
+			z-index: -1;
+
+        }
+	</style>
+</head>
+<body>
+	<p align="justify">
+		<font size="5">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</font>
+		
+	</p>
+	<img src="f:/images/cherry.jpg">
+	<p align="justify">
+		<font size="6">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</font>
+		
+	</p>
+
+</body>
+</html>
+
+POSITION CSS 3:
+==============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Position 5</title>
+	<style type="text/css">
+		img
+		{
+			position: sticky;
+			left: 100px;
+			top: 50px;
+			z-index: -1;
+
+        }
+	</style>
+</head>
+<body>
+	<p align="justify">
+		<font size="5">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</font>
+		
+	</p>
+	<img src="f:/images/cherry.jpg">
+	<p align="justify">
+		<font size="6">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</font>
+		
+	</p>
+
+</body>
+</html>
+
+POSITION:
+========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Position 1</title>
+	<style type="text/css">
+		img
+		{
+			position: static;
+			left: 100px;
+			top: 50px;
+			z-index: -1;
+
+        }
+	</style>
+</head>
+<body>
+	<p align="justify">
+		<font size="5">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</font>
+		
+	</p>
+	<img src="f:/images/cherry.jpg">
+	<p align="justify">
+		<font size="6">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</font>
+		
+	</p>
+
+</body>
+</html>
+
+RGB AND RGBA:
+============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Background Image</title>
+	<style type="text/css">
+		#but1
+		{
+			background-color: rgb(240,125,250);
+			color: rgba(240,125,50,.9);
+			height: 100px;
+			width: 200px;
+			background-size: cover;
+			border-radius: 30px;
+			cursor: pointer;
+			font-size: 30px;
+			font-weight: bold;
+			
+		}
+	</style>
+</head>
+<body>
+	<input type="color">
+	<input id="but1" type="button" value="clickme">
+
+</body>
+</html>
+
+TABLE BORDER COLLAPSE:
+=====================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table-Border Collapse</title>
+	<style type="text/css">
+		table,th,td
+		{
+			border: 0px solid rgb(1,152,122);
+			border-collapse: collapse;
+		}
+		#hrow
+		{
+			border: 3px solid rgb(1,152,122);
+			background-color: rgb(1,152,122);
+			border-radius: 10px;
+		}
+		#orow
+		{
+			background-color: rgba(11,11,22,.2);
+		}
+		#erow
+		{
+			background-color: rgba(1,152,122,.2);
+		}
+	</style>
+</head>
+<body>
+	<table cellpadding="20">
+		<tr id="hrow"><th>Serial Number</th>
+		              <th>Student Name</th>
+		              <th>Tamil</th>
+		              <th>English</th>
+		              <th>Maths</th>
+		              <th>Science</th>
+		              <th>Total</th></tr>
+		<tr id="orow"><td>1001</td>
+		              <td>BHUVANA</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>400</td></tr>
+		<tr id="erow"><td>1002</td>
+		              <td>REETHIKA</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>400</td></tr>             
+		
+		<tr id="orow"><td>1003</td>
+		              <td>KATHIRVEL</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>400</td></tr>             
+		
+		<tr id="erow"><td>1004</td>
+		              <td>MUTHU</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>400</td></tr>             
+		
+		<tr id="orow"><td>1005</td>
+		              <td>NITHULYA</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>400</td></tr>
+		<tr id="erow"><td>1006</td>
+		              <td>SELVI</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>100</td>
+		              <td>400</td></tr>             
+		             
+		             
+		
+	</table>
+
+</body>
+</html>
+
+TEXT-DECORATION:
+===============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text-Decoration</title>
+	<style type="text/css">
+		a
+		{
+			text-decoration: none;
+			border: 2px solid green;
+			outline: 3px solid red;
+			outline-offset: 2px;
+			border-radius: 20px;
+		}
+	</style>
+</head>
+<body>
+	<a href="external css.html">clickme</a>
+
+</body>
+</html>
+
+TOP-BAR IN CSS:
+==============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Top bar in css</title>
+	<style type="text/css">
+		a
+		{
+			text-decoration: none;
+			background-color: red;
+			margin-left: 50px;
+			font-size: 30px;
+			color: white;
+		}
+		#topbar
+		{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			align-items: center;
+			height: 50px;
+			background-color: rgb(11,222,100);
+		}
+		#part1
+		{
+           width: 100%;
+           height: 500px;
+           background-color: orange;
+       }
+       #part2
+		{
+           width: 100%;
+           height: 500px;
+           background-color: yellow;
+       }
+       #part3
+		{
+           width: 100%;
+           height: 500px;
+           background-color: pink;
+       }
+       #part4
+		{
+           width: 100%;
+           height: 500px;
+           background-color: blue;
+       }
+
+	</style>
+</head>
+<body>
+      <div id="topbar">
+      	<a href="#part1">first part</a>
+      	<a href="#part2">second part</a>
+      	<a href="#part3">third part</a>
+      	<a href="#part4">fourth part</a>
+      	
+      </div>
+      <div id="part1">
+      	part1
+      </div>
+      <div id="part2">
+      	part2
+      </div>
+      <div id="part3">
+      	part3
+      </div>
+      <div id="part4">
+      	part4
+      </div>
+</body>
+</html>
+
+TRANSFORM CSS:
+=============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Translate</title>
+	<style type="text/css">
+		div
+		{
+			width: 500px;
+			height: 500px;
+			background-color: yellow;
+			border: 10px solid red;
+
+		}
+		div:hover
+		{
+			  transform: translate(100px,200px);
+			/*transform: translateX(100px);
+			  transform: translateY(200px);*/
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+
+</body>
+</html>
+
+TRANSFORM CSS 1:
+===============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rotate</title>
+	<style type="text/css">
+		div
+		{
+			width: 500px;
+			height: 500px;
+			background-color: blue;
+			border: 10px solid green;
+
+		}
+		div:hover
+		{
+			    transform:rotate(100deg);
+			  /*transform:rotate(-100deg);*/ 
+			
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+
+</body>
+</html>
+
+TRANSFORM CSS 2:
+===============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scale</title>
+	<style type="text/css">
+		div
+		{
+			width: 500px;
+			height: 500px;
+			background-color: pink;
+			border: 10px solid orange;
+
+		}
+		div:hover
+		{
+			    transform: scale(1.5);
+			  /*transform: scaleX(1.5);
+			    transform: scaleY(1.5);*/
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+
+</body>
+</html>
+
+TRANSFORM CSS 3:
+===============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Skew</title>
+	<style type="text/css">
+		div
+		{
+			width: 500px;
+			height: 500px;
+			background-color: red;
+			border: 10px solid black;
+
+		}
+		div:hover
+		{
+			    transform: skew(20deg,40deg);
+			  /*transform: skewX(20deg);
+			  transform: skewY(40deg);*/
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+
+</body>
+</html>
+
+TRANSITION:
+==========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Translate</title>
+	<style type="text/css">
+		div
+		{
+			width: 500px;
+			height: 500px;
+			background-color: pink;
+			border: 10px solid red;
+			transition-property: transform;
+			transition-duration: 7s;
+			transition-delay: 2s;
+			transition-timing-function: ease-in-out;
+			/*transition-timing-function: ease-in;
+			  transition-timing-function: ease-out;*/
+
+		}
+		div:hover
+		{
+			  transform: rotate(360deg);
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+
+</body>
+</html>
+
+VISIBILITY CSS:
+==============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visible Hidden</title>
+	<style type="text/css">
+		#img2
+		{
+			visibility: visible;
+			
+		}
+		#img2:hover
+		{
+			visibility: hidden;
+		}
+	</style>
+</head>
+<body>
+	<img id="img1" src="f:/images/tomato.jpg">
+	<img id="img2" src="f:/images/black double grapes.jpg">
+	<img id="img3" src="f:/images/double strawberry.jpg">
+
+</body>
+</html>
+
+VISIBILITY:
+==========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visible Hidden</title>
+	<style type="text/css">
+		#img2
+		{
+			/*visibility: visible;*/
+			visibility: hidden;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<img id="img1" src="f:/images/tomato.jpg">
+	<img id="img2" src="f:/images/black double grapes.jpg">
+	<img id="img3" src="f:/images/double strawberry.jpg">
+
+</body>
+</html>
+
+Z-INDEX CSS:
+===========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Z-Index</title>
+	<style type="text/css">
+		div
+		{
+			width: 400px;
+			height: 300px;
+			background-color: rgba(211,122,133,.9);
+		}
+		h1
+		{
+          position: absolute;
+          top: 20px;
+          z-index: -1;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+	<h1>carrot,beetroot and radish</h1>
+
+</body>
+</html>
+
+Z-INDEX IMAGE TAG CSS:
+======================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Z-Index imgtag</title>
+	<style type="text/css">
+		img
+		{
+			width: 600px;
+			height: auto;
+			opacity: .8;
+		}
+		h1
+		{
+			position: absolute;
+			top: 20px;
+			z-index: -1;
+
+		}
+	</style>
+</head>
+<body>
+	<img src="f:/images/red apple.jpg">
+	<h1>Apple is red colour and it is very healthy</h1>
+
+</body>
+</html>
+
+PROJECT-GROCERY:
+===============
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GROCERY</title>
+	<style type="text/css">
+		video
+		{
+			position: fixed;
+			width: 100%;
+			z-index: -1;
+			color: white;
+		}
+		.n
+		{
+			z-index: -1;
+			color: white;
+			
+		}
+		b
+		{
+			padding: 100px;
+			cursor: pointer;
+			color: yellow;
+
+		}
+		h4
+		{
+			padding: 0px 40px; 
+			display: inline-block;
+			position: sticky;
+			color: yellow;
+			font-size: 16px;
+		}
+		h4:hover
+		{
+			padding: 10px 40px; 
+			display: inline-block;
+			text-decoration: underline;
+			background-color: rgb(128,0,32);
+			color:pink;
+			cursor: pointer;
+		}
+		button
+		{
+			display: inline-block;
+			text-align: center;
+			border: 1px solid black;
+			left: 1000px;
+			cursor: pointer;
+			
+		}
+		button:hover
+		{
+			display: inline-block;
+			text-align: center;
+			border: 1px solid black;
+			left: 1000px;
+			background-color: green;
+			color: white;
+			cursor: pointer;
+			border-radius: 20px;
+			
+		}
+		#list a
+		{
+			display: block;
+			text-decoration: none;
+			color: white;
+			left: 200px;
+			text-align: center;
+			top: 290px;
+		}
+		#list a:hover
+		{
+			display: block;
+			text-decoration: none;
+			color: red;
+			left: 200px;
+			text-align: center;
+			top: 290px;
+			background-color: yellow;
+			border: 1px solid black;
+			border-radius: 30px;
+		}
+		#list
+		{
+			display: none;
+			color: white;
+			left: 200px;
+			text-align: center;
+			top: 290px;
+		}
+		#item
+		{
+			display: inline-block;
+			color: white;
+			left: 200px;
+			text-align: center;
+			top: 290px;
+		}
+		#item:hover #list
+		{
+			display: block;
+			color: white;
+			left: 80px;
+			position: absolute;
+			text-align: center;
+			top: 20px;
+		}
+		.s
+		{
+			text-align: center;
+			margin-left: 200px;
+			margin-top: 50px;
+			position: fixed;
+			
+		}
+		#list1
+		{
+			display: none;
+		}
+		#list1 a
+		{
+			color: blue;
+			background-color: pink;
+		}
+		#list1 a:hover
+		{
+			color: green;
+			background-color: orange;
+		}
+		#item1:hover #list1
+		{
+			display: block;
+		}
+		#list2 a
+		{
+			display: block;
+			text-decoration: none;
+			color: white;
+			left: 100px;
+			text-align: center;
+			top: 290px;
+		}
+		#list2 a:hover
+		{
+			display: block;
+			text-decoration: none;
+			color: red;
+			left: 100px;
+			text-align: center;
+			top: 290px;
+			background-color: yellow;
+			border: 1px solid black;
+			border-radius: 30px;
+		}
+		#list2
+		{
+			display: none;
+			color: white;
+			left: 100px;
+			text-align: center;
+			top: 290px;
+		}
+		#item2
+		{
+			display: inline-block;
+			color: white;
+			left: 100px;
+			text-align: center;
+			top: 290px;
+		}
+		#item2:hover #list2
+		{
+			display: block;
+			color: white;
+			left: 650px;
+			position: absolute;
+			text-align: center;
+			top: 20px;
+		}
+		#m
+		{
+			margin-left: 850px;
+			margin-top: -60px;
+		}
+		#o
+		{
+			display: none;
+			
+		}
+		#o a
+		{
+			color: white;
+			text-decoration: none;
+			margin-top: -600px;
+			margin-left: 45px;
+		}
+
+		#o a:hover
+		{
+			color: yellow;
+			background-color: red;
+		}
+		#m:hover #o
+		{
+			display: block;
+			margin-top: -20px;
+
+		}
+		a
+		{
+			background-color:rgb(76,200,31);
+		}
+		
+</style>
+</head>
+<body>
+	<div class="n">
+	<video controls autoplay loop muted plays-inline>
+		<source src="f:/vegfru.mp4" type="video/mp4">
+	</video>
+      <b>LOGO</b>
+      <h4>HOME</h4>
+      <h4>ABOUT</h4>
+      <h4>INFO</h4>
+      <h4>CONTACT US</h4>
+      <div id="m">
+           <h4>SERVICE</h4>
+      <div id="o">
+      	<a href="#">customer</a><br>
+      	<a href="#">online</a>
+       </div>
+      </div>
+     
+      <br>
+       <div class="s">
+       <button>PRODUCTS</button>
+       <div id="item">
+       <button>ITEMS</button>
+       <div id="list">
+       	<a href="#">Vegetables</a>
+       	<div id="item1">
+       	<a href="#">Fruits</a>
+       	<div id="list1">
+       		<a href="#">Apple</a>
+       		<a href="#">Mango</a>
+       		<a href="#">Grapes</a>
+       		<a href="#">Papaya</a>
+       		<a href="#">Orange</a>
+       		<a href="#">Banana</a>
+       		<a href="#">Jamun</a>
+       	</div>
+       </div>
+       	<a href="#">soap</a>
+        <a href="#">Biscuits</a>
+       	<a href="#">Chocolates</a>
+       	<a href="#">Rice Flour</a>
+       	<a href="#">Perfumes</a>
+       </div>
+   </div>
+       <button>QUALITY</button>
+       <button>SPICES</button>
+       <button>DAIRY PRODUCTS</button>
+       <button>SNACKS</button>
+       <button>DRINKS</button>
+       <button>HOUSEHOLD</button>
+       <div id="item2">
+       <button>OIL</button>
+       <div id="list2">
+       	<a href="#">groundnut oil</a>
+       	<a href="#">sunflower oil</a>
+       	<a href="#">gold winner oil</a>
+       	<a href="#">deepam oil</a>
+       </div>
+   </div>
+       <button>GRAINS</button>
+       <button>PULSES</button>
+       <button>PAPER</button>
+      </div>
+</div>
+</body>
+</html>
+
+PROJECT-LOGIN FORM:
+==================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN FORM</title>
+	<style type="text/css">
+		img
+		{
+			width: 100%;
+			height: 900px;
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			z-index: -1;
+		}
+		#img1
+		{
+			position: fixed;
+			margin: 70px;
+			width: 70%;
+			height: 500px;
+			left: 150px;
+			top: 50px;
+			z-index: -1;
+		}
+		form
+		{
+			box-shadow: 30px 10px 20px 0px rgba(255,255,255,.4);
+			position: absolute;
+			left: 500px;
+			width: 500px;
+			height: 500px;
+			bottom: 35px;
+            color: white;
+			border-radius: 50px;
+			opacity: .9;
+			border-left: 1px solid rgba(255,255,255,.3);
+	        border-top: 1px solid rgba(255,255,255,.3);
+
+		}
+		label
+		{
+			font-size: 30px;
+	        color: white;
+	        margin-left: 10%;
+	        opacity: .8;
+	        font-weight: bold;
+		}
+		input
+		{
+			width: 65%;
+	        margin: 5%;
+	        margin-bottom: 10%;
+	        border: none;
+	        outline: none;
+	        background:transparent;
+	        color: white;
+	        border-bottom: 2px solid rgba(31,38,135,.9);
+	        opacity: .8;
+	        cursor: pointer;
+		}
+		button
+		{
+			width: 30%;
+			height: 30px;
+            border-radius: 40px;
+			border: 2px solid white;
+			border-left: 1px solid rgba(255,255,255,.3);
+	        border-top: 1px solid rgba(255,255,255,.3);
+	        background-color: rgba(255,255,255,.4);
+	        margin-left: 145px;
+	        cursor: pointer;
+
+
+
+		}
+
+		h4
+		{
+			text-align: center;
+			margin-right: 50px;
+			display: block;
+			bottom: : 0px;
+			cursor: pointer;
+		}
+		h3
+		{
+			border: 2px solid white;
+			text-align: center;
+			border: inset;
+			width: 50%;
+			height: 30px;
+			margin-left: 90px;
+		}
+		h3:hover
+		{
+			border: 2px solid white;
+			text-align: center;
+			border: inset;
+			width: 50%;
+			height: 30px;
+			margin-left: 90px;
+			color: pink;
+			background-color: blue;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<img src="f:/images/blue nature.jpg">
+	<img id="img1" src="f:/images/blue nature.jpg">
+	
+	<form>
+		<h1>LOGIN</h1>
+		<label>USER NAME</label>
+		<input type="text">
+		<label>PASSWORD</label>
+		<input type="password">
+		<button>login</button>
+		<h4>Forget Password</h4>
+		<h3>sign in</h3>
+
+	</form>
+
+</body>
+</html>
+
+PROJECT-LOGIN FORM 1:
+====================
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sf</title>
+	<style type="text/css">
+		div
+		{
+		background-color: gray;
+		background-size: cover;
+		height: 1000px;
+		width: 100%;
+		border-radius: 20px;
+		
+	    }
+	    form
+	    {
+	    	text-align: center;
+	    	border-radius: 30px;
+	    	border:3px solid pink;
+	    	margin-left: 400px;
+	    	display: block;
+	    	width: 40%;
+	    	height: 950px;
+	    	color: white;
+	    	border-top: 30px;
+	    	cursor: pointer;
+
+
+	    }
+	    h1
+	    {
+	    	text-align: center;
+	    	color: white;
+	    }
+	    label
+	    {
+	    	top: 50%;
+	    	color: white;
+	    	display: block;
+	    	margin: 5%;
+	    	cursor: pointer;
+	    	text-align: center;
+	    	
+	    }
+	    input
+	    {
+	    	cursor: pointer;
+	    	display: block;
+	    	width: 50%;
+	    	margin-left: 100PX;
+
+	    }
+	    select
+	    {
+	    	cursor: pointer;
+	    }
+	    button:hover
+	    {
+	    	background-color: white;
+	    	color: gray;
+
+	    }
+	</style>
+</head>
+<body>
+	<div>
+         <h1> APPLICATION FORM</h1>
+		<form>
+			<u>FILL IN BLOCK LETTERS</u>
+			<label>NAME:<input type="text" placeholder="enter name" name="a"></label>
+			<label>FATHER'S NAME:<input type="text" placeholder="enter name" name="a"></label>
+			<label>DATE OF BIRTH:<input type="date" placeholder="dd/mm/yy" name="d"></label>
+			<label>E-MAIL:<input type="email" placeholder="email" name="e"></label>
+			<label>RELIGION:<input type="text" name="e"></label>
+			<label>NATIONALITY:<input type="text" name="e"></label>
+
+			<label>ADDRESS:<textarea rows="6" cols="20"></textarea></label>
+			<label>SELECT LANGUAGE:<select><option>TAMIL</option>
+			                       <option>ENGLISH</option>
+			                       <option>HINDI</option>
+			                       <option>TELUGU</option>
+			                       <option>MALAYALAM</option></select></label>
+
+			<label>GENDER:<input type="radio" name="a">MALE<input type="radio" name="a">FEMALE<input type="radio" name="a">OTHERS</label>
+			<label>MOBILE NUMBER:<input type="NUMBER" name="e"></label>
+			<label>DATE:<input type="NUMBER" name="e"></label>
+		
+			<label><button>SUBMIT</button><label>
+			
+
+
+		</form>
+		
+	</div>
+
+	
+
+</body>
+</html>
+MENU BAR:
+========
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu icon</title>
+	</head>
+<body>
+	
+		
+		<p> click menu icon to transform "x":</p>
+		<div class="c" onclick="myFunction(this)">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+		</div>
+		<script type="text/javascript">
+			function myFunction(x) 
+			{
+				x.classList.toggle("change");
+			}
+		</script>
+		
+
+	
+
+	
+</body>
+</html>
