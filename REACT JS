@@ -1,1 +1,1406 @@
+REACTJS SIMPLE PROGRAM:
+======================
+function App()
+{
+  var a=10
+  var b=20
+  var c=a+b
+  return( 
+    <div>
+      <h1>A value:{a}</h1>
+      <h1>B value:{b}</h1>
+      <h1> Total: {c}</h1>
+        <h1>Welcome to React</h1>
+        <h2>this is header 2</h2>
+        <h3>this is header 3</h3>
+        </div>
+        )
+}
+export default App
 
+REACTJS SIMPLE PROGRAM 1:
+========================
+function Bhuvana()
+{
+  return(
+    <>
+    <h1>Apple</h1>
+    <h1>Mango</h1>
+    <h1>Grapes</h1>
+    </>
+  )
+}
+export default Bhuvana
+
+IMAGE IMPORT:
+============
+import img1 from './images/img1.jpg'
+import './App.css'
+function Bhuvana()
+{
+  return(
+    <>
+    <center><h1>Images</h1></center>
+    <img id="myimg" src={img1} alt="path not found"></img>
+    </>
+  )
+}
+export default Bhuvana
+
+IMAGE IMPORT 1:
+==============
+import React from 'react'
+import img1 from './images/img1.jpg'
+class Bhuvana extends React.Component
+{
+  render()
+  {
+    return(
+      <center>
+        <h1>React class Component</h1>
+      </center>
+    )
+  }
+}
+//export default Bhuvana
+class Tamil extends Bhuvana
+{
+  render()
+  {
+    return(
+      <center>
+        <Bhuvana> </Bhuvana>
+        <h1>This is Tamil Component</h1>
+      </center>
+    )
+    }
+}
+class Muthu extends Tamil
+{
+  render()
+  {
+    return(
+      <>
+      <Tamil> </Tamil>
+      <h2>Combine 2 Components</h2>
+      <img src={img1} alt=" "></img>
+      </>
+     )
+  }
+}
+export default Muthu
+
+VAR,LET AND CONST:
+=================
+function Muthu()
+{
+var k=10
+let s=20
+const c=30
+return(
+  <>
+  <h1>React</h1>
+  <h2>var value:{k}</h2>
+  <h2>let value:{s}</h2>
+  <h2>let value:{s=s+10}</h2>
+  <h2>const value:{c}</h2>
+  <h2>var value:{k=k+100}</h2>
+  <h2>var value:{k}</h2>
+  {/*<h2>const value:{c=c+2}</h2>
+  </>
+)
+}
+}
+export default Muthu
+
+VAR,LET AND CONST 1:
+===================
+import React from 'react'
+class Muthu extends React.Component
+{
+render()
+{
+  const c=100
+  let s=100
+  if(true)
+  {
+    var k=100
+    //let s=100 :error coming
+  }
+  return(
+    <>
+    <h1>var value:{k}</h1>
+    <h1>var value:{++k}</h1>  
+    <h1>var value:{k++}</h1>  
+    <h1>var value:{k}</h1>  
+    <h2>const value:{c}</h2>  
+    <h2>let value:{s}</h2>    
+    </>
+  )
+}
+}
+export default Muthu
+
+VAR,LET AND CONST 2:
+===================
+import React from 'react'
+class Muthu extends React.Component
+{
+  render()
+  {
+    let s=200
+    if(true)
+    {
+      var k=100
+    }
+    return(
+      <>
+      <h1>React</h1>
+      <h1>k value:{k}</h1>
+      <h1>s value:{s}</h1>
+      <h1>Total value:{s+k}</h1>
+      </>
+    )
+  }
+}
+export default Muthu
+
+CLASS COMPONENT:
+===============
+import React from 'react'
+class Muthu extends React.Component
+{
+  render()
+  {
+    function show() //user defined function
+    {
+      //write all js code
+      //conosole.log("test console")
+      //alert("welcome to popup message")
+      document.write("object model")
+      //document.getElementById("res").innerHTML="test name"
+    }
+    const nithu=()=>{   //arrow function (very important)
+    //console.log("test console")
+    //alert("popup message")
+    //document.write("object model")
+    document.getElementById("res").innerHTML="test name"
+    }
+    let s=200
+    if(true)
+    {
+      var k=100
+    }
+    return(
+      <>
+      <h1>React</h1>
+      <h1>k value:{k}</h1>
+      <h1>s value:{s}</h1>
+      <h1>Total value:{s+k}</h1>
+      <button onClick={show}>clickme</button>
+      <button onClick={nithu}>clickme</button>
+      <div id="res"></div>
+      </>
+    )
+  }
+}
+export default Muthu
+
+Arrow function with Arg passing:
+===============================
+import React from 'react'
+class Muthu extends React.Component
+{
+  render()
+  {
+    const show=(v1,v2)=>{
+      alert(v1+v2)
+   }
+   return(
+     <>
+     <h1>Arrow Function with Arguments or Parameter</h1>
+     <button onClick={()=>show(11,22)}>clickme</button>
+     </>
+   )
+  }
+}
+export default Muthu
+
+FUNCTION COMPONENT:
+==================
+function Muthu()
+{
+  const display=()=>{
+    document.getElementById("res1").innerHTML="Answer"
+  }
+  const display2=(v1,v2)=>{
+    document.getElementById("res2").innerHTML=v1+v2
+  }
+  return(
+    <>
+    <h1>Parameter passing using arrow function</h1>
+    <input type="button" onClick={display} value="clickme"></input>
+    <input type="button" onClick={()=>display2(33,44)} value="clickme"></input>
+    <div id="res1"></div>
+    <div id="res2"></div>
+    </>
+  )
+}
+export default Muthu
+
+FUNCTION COMPONENT 2:
+====================
+function Muthu()
+{
+ //var k=new Array("sunday","monday","tuesday","wednesday","thursday","friday","saturday")
+ var k=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"] 
+ return(
+   <>
+   <h2>Arrow Function</h2>
+   <h1>week 1:{k[0]}</h1>
+   <h1>week 2:{k[1]}</h1>
+   <h1>week 3:{k[2]}</h1>
+   <h1>week 4:{k[3]}</h1>
+   <h1>week 5:{k[4]}</h1>
+   <h1>week 6:{k[5]}</h1>
+   <h1>week 7:{k[6]}</h1>
+   <ol>
+     {k.map((item)=><li>item</li>)}
+   </ol>
+   </>
+ )
+}
+export default Muthu
+
+MAP METHOD:
+==========
+function App()
+{
+  var arr=[11,22,-33,-44,55,66,77,88,99,100,-10,-100,-11,29,-29]
+  return(
+    <>
+    <h1>Map method - Advanced</h1>
+    positive numbers:
+    <ol>
+      {arr.map((item)=><>{item>0 && <li>{item}</li>}</>)}
+    </ol>
+    Negative numbers:
+    <ol>
+      {arr.map((item)=><>{item<0 && <li>{item}</li>}</>)}
+    </ol>
+    Even numbers:
+    <ol>
+      {arr.map((item)=><>{item%2===0 && <li>{item}</li>}</>)}
+    </ol>
+    Odd numbers:
+    <ol>
+      {arr.map((item)=><>{item%2!==0 && <li>{item}</li>}</>)}
+    </ol>
+    </>
+  )
+}
+export default App
+
+MAP METHOD ADVANCED:
+===================
+function App()
+{
+  var arr=[11,22,-33,-44,55,66,77,88,99,100,-10,-100,-11,29,-29]
+  var sum=0
+  var s=0
+  return(
+    <>
+    <h1>Map method - Advanced</h1>
+    positive numbers and Even numbers:
+    <ol>
+      {arr.map((v)=><>{v>0 && v%2===0 &&<li>{v}</li>}</>)}
+    </ol>
+    Negative numbers and Odd numbers:
+    <ol>
+      {arr.map((v)=><>{v<0 && v%2!==0 && <li>{v}</li>}</>)}
+    </ol>
+    Sum of array:
+    <ol style={{display:"none"}}>
+      {arr.map((v)=><h2>{sum=sum+v}</h2>)}
+    </ol>
+    <h2>Sum of array:{sum}</h2>
+    Max number:
+    <ol style={{display:"none"}}>
+  {arr.map((v)=>v>s && <>{s=v}</>)}
+  </ol>
+  <h2>Max of array:{s}</h2>
+  Min number:
+    <ol style={{display:"none"}}>
+  {arr.map((v)=>v<s && <>{s=v}</>)}
+  </ol>
+  <h2>Min of array:{s}</h2>
+    </>
+  )
+}
+export default App
+
+DESTRUCTING:
+===========
+function App()
+{
+  var mydata=[11,22,33,44,55]
+  var [v1,v2,v3,v4,v5]=mydata
+  var [v6,,v7,,v8]=mydata
+return(
+  <>
+  <h1>Destructing Demo</h1>
+  <h1>value 1:{v1}</h1>
+  <h1>value 2:{v2}</h1>
+  <h1>value 3:{v3}</h1>
+  <h1>value 4:{v4}</h1>
+  <h1>value 5:{v5}</h1>
+
+  <h1>value 6:{v6}</h1>
+  <h1>value 7:{v7}</h1>
+  <h1>value 8:{v8}</h1>
+  </>
+)
+}
+export default App
+
+DESTRUCTING 1:
+=============
+function App()
+{
+  var mydata=[11,22,33,44,55]
+  var [v1,v2,v3,v4,v5]=mydata
+  var [v6,,,v7,v8]=mydata
+return(
+  <>
+  <h1>Destructing Demo</h1>
+  <h1>value 1:{v1}</h1>
+  <h1>value 2:{v2}</h1>
+  <h1>value 3:{v3}</h1>
+  <h1>value 4:{v4}</h1>
+  <h1>value 5:{v5}</h1>
+
+  <h1>value 6:{v6}</h1>
+  <h1>value 7:{v7}</h1>
+  <h1>value 8:{v8}</h1>
+  </>
+)
+}
+export default App
+
+ADD,SUB,MUL&DIV:
+===============
+function App()
+  {
+    var show=(a,b)=>{
+      var add=a+b
+      var sub=a-b
+      var mul=a*b
+      var div=a/b
+      return[add,sub,mul,div]
+    }
+    const [v1,v2,v3,v4]=show(11,22)
+    return(
+      <>
+           <h1>Addition:{v1}</h1>
+           <h1>Subtraction:{v2}</h1>
+           <h1>Multiplication:{v3}</h1>
+           <h1>Division:{v4}</h1>
+      </>
+    )
+  }
+export default App
+
+OBJECT DESTRUCTING:
+=================
+function App()
+{
+  var stud={
+    rno:1001,
+    sname:'bhuvana',
+    marks:{
+      tamil:95,
+      eng:98,
+      mat:100,
+      sci:95,
+      soc:99
+    }
+  }
+  //const show=({rno,sname,mark})=>{
+ // return "rno:"+rno+<br></br>+"sname:"+sname+<br></br>+"mark:"+mark
+ //return(<>Rollno:{rno}<br></br>S.Name:{sname}<br></br>Mark:{mark}</>)}
+  const show=({rno,sname,marks:{tamil,eng,mat,sci,soc}})=>{
+  return(<>Rollno:{rno}<br></br>SName:{sname}<br></br>Tamil:{tamil}<br></br>English:{eng}<br></br>Maths:{mat}<br></br>Science:{sci}<br></br>Social:{soc} </>)
+}
+  var result=show(stud)
+  return(
+    <>
+    <h1>Object Destructing</h1>
+    <h1>Roll no:{stud.rno}</h1>
+    <h1>S.Name:{stud.sname}</h1>
+    <h1>Mark:{stud.marks.mat}</h1>
+    <h1>Result all data:<br></br>{result}</h1>
+   </>
+  )
+}
+export default App
+
+Spread Operator(...):
+===================
+function App()
+{
+  var a1=[11,22,33,44,55]
+  var a2=[66,77,88,99,10]
+  var carr=[...a1,...a2]
+  return(
+    <>
+        <h1>Spread Operator</h1>
+        <h2>Array 1---- {a1}</h2>
+        <h2>Array 2---- {a2}</h2>
+  <h2>Combine Array:{carr}</h2>
+    </>
+  )
+}
+export default App
+
+Spread operator with destructing:
+================================
+function App()
+{
+  var a1=[11,22,33,44,55,66,77]
+  var [a,,b,...rest]=a1   //note:spread operator only add at last
+  return(                 //we can't add var after spread operator
+    <>
+    <h1>Spread Operator with destructing</h1>
+    <h1>value1:{a}</h1>
+    <h1>value3:{b}</h1>
+    <h1>balance:{rest}</h1>
+    <h1>Last value:{a1[a1.length-1]}</h1>
+    </>
+ )
+}
+export default App
+
+spread operator using Objects + Destructing:
+==========================================
+function App()
+ {
+   var ob1={
+     rno:11,
+     name:'bhuvana',
+     mark:0
+   }
+   var ob2={
+     add:'Thumbivadi',
+     city:'karur',
+     mark:100
+   }
+   var updated={...ob1,...ob2}
+   return(
+     <>
+     <h1>spread operator using Objects + Destructing</h1>
+     <h1>update:{updated.rno}</h1>
+     <h1>update:{updated.name}</h1>
+     <h1>update:{updated.add}</h1>
+     <h1>update:{updated.city}</h1>
+     <h1>update:{updated.mark}</h1>     (//last mark only updated)
+     </>
+   )
+ }
+ export default App
+
+VALID AND INVALID:
+=================
+import Invalid from "./usercomponent/Invalid"
+import Valid from "./usercomponent/Valid"
+//ternary operator
+function App()
+{
+  var isvaliduser=true
+  return(
+       <>
+       <h1>Ternary Operator</h1>
+  <h1>{isvaliduser===true?<Valid></Valid>:<Invalid></Invalid>}</h1>
+       </>
+  )
+}
+export default App
+
+BIGGEST NUMBER:
+==============
+function App()
+{
+  var a=100
+  var b=20
+  var c=200
+  return(
+    <>
+    <h1>{a>b && a>c?"Biggest Number:"+a:b>c?"Biggest Number:"+b:"Biggest Number:"+c}</h1>
+    </>
+  )
+}
+export default App
+
+MODULES:
+=======
+import {m1} from"./usercomponent/Named"
+import {m2} from"./usercomponent/Named"
+import {m3} from"./usercomponent/Named"
+import {m4} from"./usercomponent/Named"
+import {m5} from"./usercomponent/Named"
+import {tamil,eng,mat} from"./usercomponent/Named"
+//modules
+function App()
+{
+  return(
+    <>
+    <h1>Modules</h1>
+    <h1>Mark 1:{m1}</h1>
+    <h1>Mark 2:{m2}</h1>
+    <h1>Mark 3:{m3}</h1>
+    <h1>Mark 4:{m4}</h1>
+    <h1>Mark 5:{m5}</h1>
+    <h1>Tamil:{tamil}</h1>
+    <h1>English:{eng}</h1>
+    <h1>Maths:{mat}</h1>
+    </>
+  )
+}
+export default App
+
+FUNCTION COMPONENT 3:
+====================
+function App()
+{
+  var stud={
+    rno:11,
+    name:"bhuvana",
+    mark:{
+      tam:99,
+      eng:98,
+      mat:100,
+      sci:99,
+      soc:97
+    }
+  }
+ /* const show=({mark:{tam,eng,mat,sci,soc}})=>{
+  return(<>Tamil:{tam}<br></br>English:{eng}<br></br>Maths:{mat}<br></br>Science:{sci}<br></br>Social:{soc}</>)
+  }
+  var res=show(stud)
+  return(
+    <>
+    <h1>React nested json</h1>
+    <h1>Rollno:{stud.rno}</h1>
+    <h1>Name:{stud.name}</h1>
+    <h1>Tamil mark:{stud.mark.tam}</h1>
+    <h1>English mark:{stud.mark["eng"]}</h1>
+    <h1>Maths mark:{stud.mark.mat}</h1>
+    <h1>Science mark:{stud.mark.sci}</h1>
+    <h1>Social mark:{stud.mark.soc}</h1>
+    <h1>Total:{stud.mark.tam+stud.mark.eng+stud.mark.mat+stud.mark.sci+stud.mark.soc}</h1>
+  </>
+  )
+}
+export default App
+
+BIGGEST AMONG 3 NUMBERS:
+=======================
+function App()
+{
+  var a=100
+  var b=2000
+  var c=200
+  return(
+    <>
+    <h1>Biggest among three numbers:{(a>b) && (a>c)?a:(b>c)?b:c}</h1>
+    </>
+  )
+}
+export default App
+
+MAX OF ARRAY:
+===========
+function App()
+{
+  var a=[11,22,33,44,55,66,77,88,99,100]
+  var l=a.length
+  var s=0
+  var e=0
+  for(var i=0;i<l;i++)
+  {
+    if(a[i]>s)
+    {
+      e=s
+      s=a[i]
+    }
+    else if(a[i]>e && a[i]<s)
+    {
+      e=a[i]
+    }
+  }
+  return(
+    <>
+    
+    <h1>Max of array:{e}</h1>
+    </>
+  )
+}
+export default App
+
+FIBONNACCI SERIES:
+=================
+function App()
+{
+  var n=5
+  var a=0
+  var b=1
+  var c=a+b
+  for(var i=0;i<n;i++)
+    return(
+    <>
+    
+    <h1>Fibonacci series:{a}</h1>
+    <h1>Fibonacci series:{b}</h1>
+    <h1>Fibonacci series:{c}</h1>
+    </>
+  )
+}
+export default App
+
+PRIME OR NOT:
+============
+function App()
+{
+  var n=5
+  var i,f=0
+  var a=" "
+  for(i=2;i<n;i++)
+  {
+    if(n%i===0)
+    
+      f=0;
+  }
+  if(f===0)
+  {
+  a=n+ "is prime"
+  }
+  else
+  {
+  a=n+ "is not prime"
+  }
+  return(
+    <h1>Prime or Not prime:{a}</h1>
+  )
+}
+
+export default App
+
+PASS AND FAIL:
+=============
+function App()
+{
+  var m1=100
+  var m2=34
+  var m3=99
+  var m4=87
+  var m5=56
+  //var res=" "
+  /*if(m1>34 && m2>34 && m3>34 && m4>34 && m5>34)
+  {
+    res="Pass"
+  }
+  else{
+    res="Fail"
+  }
+  return(
+    <>
+       <h1>Result</h1>
+       <h1>{(m1>34 && m2>34 && m3>34 && m4>34 && m5>34 && "Pass") || "Fail"}</h1>
+      <h1>{(m1<=34 || m2<=34 || m3<=34 || m4<=34 || m5<=34) && "Fail"}</h1>
+    </>
+  )
+}
+export default App
+
+REACT JSON WITH ARRAY:
+=====================
+function App()
+{
+  var list=[{rno:1,name:'bhuvana'},{rno:2,name:'muthu'},{rno:3,name:'nithu'}]
+  var stud={
+    rno:11,
+    name:"bhuvana",
+  mark:[99,77,88,89,90,100]
+  
+  return(
+    <>
+    <h1>React json with array</h1>
+    <h1>Rollno:</h1>
+  <o1>{stud.mark.map((item)=> <li>{item}</li>)}</o1>
+    <h2>Roll no:{stud.rno}</h2>
+    <h2>Name:{stud.name}</h2>
+    <h2>Tamil:{stud.mark[0]}</h2>
+    <h2>English:{stud.mark[1]}</h2>
+    <h2>Maths:{stud.mark[2]}</h2>
+    <h2>Science:{stud.mark[3]}</h2>
+  <h2>Social:{stud.mark[4]}</h2>
+    </>
+  )
+}
+export default App
+
+REACT JSON WITH ARRAY 1:
+=======================
+function App()
+{
+  var list=[{rno:1,name:'bhuvana'},{rno:2,name:'muthu'},{rno:3,name:'nithu'}]
+  return(
+    <>
+    <h1>React json with array</h1>
+  <o1>{list.map((item)=><li>{item.rno} {item.name}</li>)}</o1>
+    </>
+    )
+  }
+  export default App
+
+REACT STYLING AND CSS:
+=====================
+import './mycss/bhustyle.css'
+export default function App()
+{
+  return(
+    <>
+<center>
+  <h1 style={{backgroundColor:"green",fontSize:"50px",color:"white"}}>React styling and css</h1>
+  <p>I like red colour.The rose flower which admire everyone is red rose.I like red colour.
+    The rose flower which admire everyone is red rose.I like red colour.
+    The rose flower which admire everyone is red rose.I like red colour.
+    The rose flower which admire everyone is red rose.I like red colour.
+    The rose flower which admire everyone is red rose.I like red colour.
+    The rose flower which admire everyone is red rose.I like red colour.
+    The rose flower which admire everyone is red rose.I like red colour.The rose flower which admire everyone is red rose.I like red colour.The rose flower which admire everyone is red rose.I like red colour.The rose flower which admire everyone is red rose.I like red colour.The rose flower which admire everyone is red rose.</p>
+  </center>
+  </>
+  ) 
+}
+
+IMAGES:
+======
+import {a,b,c} from "./usercomponent/imgjs"
+import './mycss/bhustyle.css'
+export default function App()
+{
+  return(
+    <>
+    <h1>Images</h1>
+    <img src={a} alt="path not found"></img>
+    <img src={b} alt="path not found"></img>
+    <img src={c} alt="path not found"></img>
+    </>
+  )
+}
+
+PROPS:
+=====
+function App(props)
+{
+  return(
+    <>
+    <center>
+      <h1>Roll Number:{props.data}</h1>
+      <h1>Name:{props.name}</h1>
+      <h1>course end:{props.date}</h1>
+      <h1>course ends:{props.enddate1}</h1>
+    </center>
+    </>
+  )
+}
+export default App
+
+PROPS 1:
+=======
+function App(props)
+{
+  return(
+    <>
+    <center>
+      <h1>Roll Number:{props.mydata.rno}</h1>
+      <h1>Name:{props.mydata.name}</h1>
+      <h1>Tamil Mark:{props.mydata.mark.tamil}</h1>
+      <h1>English Mark:{props.mydata.mark.eng}</h1>
+      <h1>Maths Mark:{props.mydata.mark["mat"]}</h1>
+      <h1>Science Mark:{props.mydata.mark.sci}</h1>
+      <h1>Social Mark:{props.mydata.mark.soc}</h1>
+      
+    </center>
+    </>
+  )
+}
+export default App
+
+PROPS 2:
+=======
+import React from 'react'
+class App extends React.Component
+{
+  constructor(props)
+  {
+    super()
+  }
+  render()
+  {
+    return(
+      <>
+      <h1> This is class Component</h1>
+      <h1>Roll Number:{this.props.mydata.rno}</h1>
+      <h1>Name:{this.props.mydata.name}</h1>
+      <h1>Tamil Mark:{this.props.mydata.mark.tamil}</h1>
+      <h1>English Mark:{this.props.mydata.mark.eng}</h1>
+      <h1>Maths Mark:{this.props.mydata.mark["mat"]}</h1>
+      <h1>Science Mark:{this.props.mydata.mark.sci}</h1>
+      <h1>Social Mark:{this.props.mydata.mark.soc}</h1>
+      </>
+    )
+  }
+}
+export default App
+
+PROPS 3:
+=======
+function App(props)
+{
+  var fres=[]
+  var i=0
+  for(var k in props.mydata)
+  {
+    fres[i++]=<>{k}:{props.mydata[k]}</>
+  }
+  return(
+    <>
+    <center>
+    <h1>Tamil Mark:{props.mydata.tamil}</h1>
+      <h1>English Mark:{props.mydata.eng}</h1>
+      <h1>Maths Mark:{props.mydata["mat"]}</h1>
+      <h1>Science Mark:{props.mydata.sci}</h1>
+      <h1>Social Mark:{props.mydata.soc}</h1>
+      </center>
+      =========================================
+      
+      <ol>{fres.map((item)=><li>{item}</li>)}</ol>
+    
+    </>
+  )
+}
+export default App
+
+PROPS 4:
+=======
+import React from 'react'
+class App extends React.Component
+{
+  constructor(props)
+  {
+    super()
+  }
+  render()
+  {
+  var fres=[]
+  var i=0
+  var tot=0
+  for(var k in this.props.mydata)
+  {
+    tot=tot+this.props.mydata[k]
+    fres[i++]=<tr><td>{k}</td><td align='right'>{this.props.mydata[k]}</td></tr>
+  }
+  return(
+    <>
+    <center>
+    <table border="2"><tr><th>Subject</th><th>Marks</th></tr>{fres.map((item)=><>{item}</>)}<tr><th>Total</th><td align='right'>{tot}</td></tr></table>
+    </center>
+    </>
+  )
+}
+}
+export default App
+
+REACT STATE:
+===========
+import React from 'react'
+class App extends React.Component
+{
+  constructor()
+  {
+    super()
+    this.state={
+      rno:10,
+      name:"bhuvana",
+      mark:100
+    }
+}
+render()
+{
+  return(
+    <>
+    <h1>React state</h1>
+  <h1>Roll number:{this.state.rno}</h1>
+  <h1>Name:{this.state.name}</h1>
+  <h1>Mark:{this.state.mark}</h1>
+    </>
+  )
+}
+  }
+export default App
+
+REACT STATE:
+===========
+import React from 'react'
+class App extends React.Component
+{
+  constructor(props)
+  {
+    super(props)
+    this.state=this.props.mydata
+}
+render()
+{
+  var fres=[]
+  var i=0
+  var tot=0
+  for(var r in this.state.mark)
+  {
+  tot=tot+this.state.mark[r]
+  fres[i++]=<tr><td>{r}</td><td>{this.state.mark[r]}</td></tr>
+  }
+  return(
+    <>
+    <h1>React state</h1>
+  {<h1>Roll number:{this.state.rno}</h1>
+  <h1>Name:{this.state.name}</h1>
+  <h1> Tamil Mark:{this.state.mark.tamil}</h1>
+  <h1> Englih Mark:{this.state.mark.eng}</h1>
+  <h1> Maths Mark:{this.state.mark.mat}</h1>
+  <h1> Science Mark:{this.state.mark.sci}</h1>
+  <h1> Social Mark:{this.state.mark.soc}</h1>
+  <h1>Total:{tot}</h1>}
+  <table border="2"><tr><th>Subject</th><th>Mark</th></tr>{fres.map((item)=><>{item}</>)}<tr><th>Total</th><td>{tot}</td></tr></table>
+    </>
+  )
+}
+  }
+export default App
+
+React forms:
+===========
+function App()
+{
+  return(
+    <>
+    <center>
+      <form>
+        <table border="0">
+        <tr><td><label>Enter Name:</label></td>
+        <td><input type="text"></input></td></tr>
+       
+        <tr><td><label>Enter Age:</label></td>
+        <td><input type="number"></input></td></tr>
+
+        <tr><td><label>Enter Password:</label></td>
+        <td><input type="password"></input></td></tr>
+
+        <tr><td><label>Enter Address:</label></td>
+        <td><textarea rows="5" cols="25"></textarea></td></tr>
+
+        <tr><td><label>Select Gender:</label></td>
+        <td><input type="radio" name="g"></input>Male
+        <input type="radio" name="g"></input>FeMale
+        <input type="radio" name="g"></input>Others</td></tr>
+
+        <tr><td><label>Select Courses:</label></td>
+        <td><input type="checkbox"></input>C
+        <input type="checkbox"></input>C++
+        <input type="checkbox"></input>Java
+        <input type="checkbox"></input>Python</td></tr>
+
+        <tr><td><label>Select Month:</label></td>
+        <td><select>
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+          </select></td></tr>
+
+        <tr><td><label>Enter Email:</label></td>
+        <td><input type="email"></input></td></tr>
+
+        <tr><td><label>Choose DOB:</label></td>
+        <td><input type="date"></input></td></tr>
+
+        <tr><td><label>Time:</label></td>
+        <td><input type="time"></input></td></tr>
+
+        <tr><td><label>Week:</label></td>
+        <td><input type="week"></input></td></tr>
+
+        <tr><td><label>Favorite Color:</label></td>
+        <td><input type="color"></input></td></tr>
+
+        <tr><td><label>Upload your Photo:</label></td>
+        <td><input type="file"></input></td></tr>
+
+        <tr><td><label>Volume +/-:</label></td>
+        <td><input type="range"></input></td></tr>
+
+        <tr><td></td><td>
+        <input type="submit" value="submit clickme"></input>
+        <br></br>
+        <button>button clickme</button>
+        <input type="reset" value="reset"></input>
+        <input type="button" value="normal button"></input>
+        </td>
+        </tr>
+        </table>
+      </form>
+    </center>
+    </>
+  )
+}
+export default App
+
+React event handler/handling events:
+===================================
+function App()
+{
+  const show=()=>{
+    alert("button clicked")
+  }
+  const dis=(event)=>{
+    event.preventDefault() //page without refresh
+    var v1=document.getElementById("t1").value 
+    console.log("data:",v1)
+    document.getElementById("res").innerHTML="clicked:"+v1
+    alert(v1)
+  }
+  return(
+    <form>
+      <input type="text" id="t1"></input>
+      <button onClick={show}>clickme without arg</button>
+      <button onClick={(ev)=>dis(ev)}>clickme with arg</button>
+      <input type="submit"></input>
+      <input type="button" value="normal button" onClick={show}></input>
+      <div id="res"></div>
+    </form>
+  )
+}
+export default App
+
+Addition of two numbers:
+=======================
+function App()
+{
+  const show=()=>{
+    var v1=parseInt(document.getElementById("t1").value)
+    var v2=parseInt(document.getElementById("t2").value)
+    document.getElementById("res").innerHTML="Total:"+(v1+v2)
+  }
+return(
+  <form>
+    <input type="text" id="t1" placeholder="enter no.1"></input>
+    <input type="text" id="t2" placeholder="enter no.2"></input>
+    <input type="button" value="click" onClick={show}></input>
+    <div id="res"></div>
+  </form>
+)
+}
+export default App
+
+OnChange:
+========
+function App()
+{
+  var amt500=0,amt200=0,amt100=0,amt50=0,amt20=0,amt10=0,amt5=0,amt2=0,amt1=0
+  const show1=()=>{
+    amt500=document.getElementById("t1").value*500
+    result()
+  }
+  const show2=()=>{
+    amt200=document.getElementById("t2").value*200
+    result()
+  }
+  const show3=()=>{
+    amt100=document.getElementById("t3").value*100
+    result()
+  }
+  const show4=()=>{
+    amt50=document.getElementById("t4").value*50
+    result()
+  }
+  const show5=()=>{
+    amt20=document.getElementById("t5").value*20
+    result()
+  }
+  const show6=()=>{
+    amt10=document.getElementById("t6").value*10
+    result()
+  }
+  const show7=()=>{
+    amt5=document.getElementById("t7").value*5
+    result()
+  }
+  const show8=()=>{
+    amt2=document.getElementById("t8").value*2
+    result()
+  }
+  const show9=()=>{
+    amt1=document.getElementById("t9").value*1
+    result()
+  }
+  function result()
+  {
+    document.getElementById("res").innerHTML="Total Amt:"+(amt500+amt200+amt100+amt50+amt20+amt10+amt5+amt2+amt1)
+  }
+  return(
+    <center>
+    <form>
+      <h1>onChange Event</h1>
+    500 X <input type="text" id="t1" onChange={show1} placeholder="enter amt1"></input>
+    <br></br><br></br>
+    200 X <input type="text" id="t2" onChange={show2} placeholder="enter amt2"></input>
+    <br></br><br></br>
+    100 X <input type="text" id="t3" onChange={show3} placeholder="enter amt1"></input>
+    <br></br><br></br>
+    50 X <input type="text" id="t4" onChange={show4} placeholder="enter amt2"></input>
+    <br></br><br></br>
+    20 X <input type="text" id="t5" onChange={show5} placeholder="enter amt1"></input>
+    <br></br><br></br>
+    10 X <input type="text" id="t6" onChange={show6} placeholder="enter amt2"></input>
+    <br></br><br></br>
+    5 X <input type="text" id="t7" onChange={show7} placeholder="enter amt1"></input>
+    <br></br><br></br>
+    2 X <input type="text" id="t8" onChange={show8} placeholder="enter amt2"></input>
+    <br></br><br></br>
+    1 X <input type="text" id="t9" onChange={show9} placeholder="enter amt1"></input>
+    <br></br><br></br><br></br>
+    </form>
+    <div id="res"></div>
+  </center>
+  )
+}
+export default App
+
+ONFOCUS AND ONBLUR EVENT:
+========================
+function App()
+{
+  const dis1=()=>{
+    document.getElementById("res").innerHTML="Cursor Inside"
+  }
+  const dis2=()=>{
+    document.getElementById("res").innerHTML="Cursor Outside"
+  }
+  return(
+    <>
+    <h1>OnFocus Event and onBlur Event</h1>
+    <input type="text" id="t1" onBlur={dis2} onFocus={dis1} placeholder="enter text"></input>
+    <div id="res"></div>
+    </>
+  )
+}
+export default App
+
+
+OnFocus and onBlur 1:
+====================
+function App()
+{
+  const dis1=(event)=>{
+    //console.log(event.target.id)
+    //document.getElementById("t1").style.backgroundColor="rgb(255,255,255)"
+    //document.getElementById("t2").style.backgroundColor="rgb(255,255,255)"
+    //document.getElementById("t3").style.backgroundColor="rgb(255,255,255)"
+    //document.getElementById("t4").style.backgroundColor="rgb(255,255,255)"
+    //document.getElementById("t5").style.backgroundColor="rgb(255,255,255)"
+    document.getElementById(event.target.id).style.backgroundColor="rgb(655,22,57)"
+  }
+  const dis2=(event)=>{
+    //document.getElementById("t1").style.backgroundColor="rgb(255,255,255)"
+    //document.getElementById("t2").style.backgroundColor="rgb(255,255,255)"
+    //document.getElementById("t3").style.backgroundColor="rgb(255,255,255)"
+    //document.getElementById("t4").style.backgroundColor="rgb(255,255,255)"
+    //document.getElementById("t5").style.backgroundColor="rgb(255,255,255)"
+    document.getElementById(event.target.id).style.backgroundColor="rgb(255,255,255)"
+  }
+  return(
+    <>
+    <h1>OnFocus Event and onBlur Event</h1>
+    <input type="text" id="t1" onBlur={(ev)=>dis2(ev)} onFocus={(e)=>dis1(e)} placeholder="enter text"></input>
+    <input type="text" id="t2" onBlur={(ev)=>dis2(ev)} onFocus={(e)=>dis1(e)} placeholder="enter text"></input>
+    <input type="text" id="t3" onBlur={(ev)=>dis2(ev)} onFocus={(e)=>dis1(e)} placeholder="enter text"></input>
+    <input type="text" id="t4" onBlur={(ev)=>dis2(ev)} onFocus={(e)=>dis1(e)} placeholder="enter text"></input>
+    <input type="text" id="t5" onBlur={(ev)=>dis2(ev)} onFocus={(e)=>dis1(e)} placeholder="enter text"></input>
+    <div id="res"></div>
+    </>
+  )
+}
+export default App
+
+ONSUBMIT EVENT:
+==============
+function App()
+{
+  const dis=(event)=>{
+    event.preventDefault()
+    alert("click")
+  }
+  return(
+    <>
+    <center>
+     <h1>OnSubmit Event</h1>
+     <form onSubmit={(e)=>dis(e)}>
+     <input type="text" name="t1"></input>
+     <br></br>
+     <input type="button" value="clickme normal button"></input>
+     <br></br>
+     <input type="submit"></input>
+     <br></br>
+     <input type="reset" value="clear"></input>
+     <br></br>
+     <button>clickme</button>
+     </form>
+     </center>
+    </>
+)
+}
+export default App
+
+On Submit Event 1:
+=================
+function App()
+{
+  const dis=(event)=>{
+   alert("click")
+  }
+  return(
+    <>
+    <center>
+     <h1>OnSubmit Event</h1>
+     <form onSubmit={(e)=>dis(e)}>
+     <input type="text" name="t1"></input>
+     <br></br>
+     <input type="button" value="clickme normal button"></input>
+     <br></br>
+     <input type="submit"></input>
+     <br></br>
+     <input type="reset" value="clear"></input>
+     <br></br>
+     <button>clickme</button>
+     </form>
+     </center>
+    </>
+)
+}
+export default App
+
+EVENT TARGET VALUE:
+==================
+function App()
+{
+  var ans=0
+  const findtot=(v)=>{
+    ans=ans+parseInt(v)
+   /*var a=parseInt(document.getElementById("t1").value)
+    var b=parseInt(document.getElementById("t2").value)
+    var c=parseInt(document.getElementById("t3").value)
+    var d=parseInt(document.getElementById("t4").value)
+    var e=parseInt(document.getElementById("t5").value)
+    //var f=a+b+c+d+e
+    //document.getElementById("tot").innerHTML="Total:"+f
+    document.getElementById("tot").innerHTML=a+b+c+d+e
+    document.getElementById("tot").innerHTML=ans
+  }
+  return(
+    <>
+    <h1>Event.Target.Value</h1>
+    <input type="text" id="t1" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t2" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t3" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t4" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t5" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="button" onClick={findtot} value="find total:"></input>
+    <div id="tot"></div>
+  
+
+    </>
+  )
+}
+export default App
+
+EVENT TARGET VALUE 1:
+====================
+function App()
+{
+  var ans=0
+  const findtot=(v)=>{
+    ans=ans+parseInt(v)
+   /* var a=parseInt(document.getElementById("t1").value)
+    var b=parseInt(document.getElementById("t2").value)
+    var c=parseInt(document.getElementById("t3").value)
+    var d=parseInt(document.getElementById("t4").value)
+    var e=parseInt(document.getElementById("t5").value)
+    document.getElementById("tot").innerHTML=a+b+c+d+e*/
+    document.getElementById("tot").innerHTML=ans
+  }
+  return(
+    <>
+    <h1>Event.Target.Value</h1>
+    <input type="text" id="t1" onBlur={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t2" onBlur={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t3" onBlur={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t4" onBlur={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t5" onBlur={(e)=>findtot(e.target.value)}></input>
+    <input type="button" onClick={findtot} value="find total:"></input>
+    <div id="tot"></div>
+  
+
+    </>
+  )
+}
+export default App
+
+EVENT TARGET VALUE 2:
+====================
+function App()
+{
+  var ans=0
+  const findtot=(v)=>{
+    ans=ans+parseInt(v)
+   /* var a=parseInt(document.getElementById("t1").value)
+    var b=parseInt(document.getElementById("t2").value)
+    var c=parseInt(document.getElementById("t3").value)
+    var d=parseInt(document.getElementById("t4").value)
+    var e=parseInt(document.getElementById("t5").value)
+  document.getElementById("tot").innerHTML=a+b+c+d+e*/
+    document.getElementById("tot").innerHTML=ans
+  }
+  return(
+    <>
+    <h1>Event.Target.Value</h1>
+    <input type="text" id="t1" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t2" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t3" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t4" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t5" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="button" onClick={findtot} value="find total:"></input>
+    <div id="tot"></div>
+  
+
+    </>
+  )
+}
+export default App
