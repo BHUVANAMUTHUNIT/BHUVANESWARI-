@@ -1,1 +1,1022 @@
+SIMPLE PROGRAM IN NODE.JS:
+=========================
+var myhttp=require("http")
+console.log("http module ok")
+myhttp.createServer((request,response)=>{
+   response.end("<h1>welcome to new model node js")
+}).listen(1234)
+console.log("port lising at ... 1234")
+
+ASYNC DEMO:                     //SHOULD SAVE AS .JS
+==========
+var fs=require("fs")
+fs.readFile("text2.txt",(err,data)=>{
+    if(err)
+        console.log(err.toString())
+    else
+        console.log(data.toString())
+})
+console.log("program end")
+
+BUFFER DEMO:
+===========
+/*var buf=Buffer.alloc(15,"G")
+console.log(buf)
+console.log(buf.toString())*/
+/*var buf=Buffer.alloc(100)
+console.log(buf)
+console.log("Data:",buf.toString())
+len=buf.write("welcome to buffer global")
+console.log(buf)
+console.log("Data:",buf.toString())
+console.log("Total global buffer size:",buf.length)
+console.log("Text size length:",len)*/
+/*var buf=Buffer.alloc(20)
+console.log(buf)
+buf.fill('E')
+console.log(buf)
+console.log(buf.toString())*/
+/*var buf=Buffer.allocUnsafe(100)    //garbage value
+console.log(buf)
+console.log("Data:",buf.toString())*/
+/*var buf=Buffer.from("abcdefghijklmnopqrstuvwxyz")
+//var buf=Buffer.from("bhuvana")
+console.log(buf)
+console.log(buf.toString())
+len=buf.length
+console.log(len)
+//console.log(buf.length)
+//buf.write("abcdefghijklmnopqrstuvwxyz",10)
+//console.log(buf)
+//console.log(buf.toString())
+buf.write("bhuvaneshwari",10)
+console.log(buf.toString())
+buf.write("klmnopqrstuvwxyz",11)*/
+/*var buf=Buffer.from("abcdefghijklmnopqrstuvwxyz")
+for(x of buf.values())
+{
+    console.log(x,"-")
+}
+for(x of buf.toString())
+{
+    console.log(x,"-")
+}*/
+/*var buf=Buffer.from("abcdefghijklmnopqrstuvwxyz")
+var ip="bhuvana"
+var ind=6
+var totlen=buf.length+ip.length
+var buf1=Buffer.alloc(totlen)
+console.log(totlen)
+    buf1.write(ip,ind)
+    console.log(buf1)
+    console.log(buf1.toString())
+    var i=-1;
+    for (x of buf.toString())
+    {
+        ++i
+        if(i<ind)
+        buf1.write(x,i)
+        else
+        buf1.write(x,i+ip.length)
+    }
+    console.log(buf1.toString())*/
+    //var c="abxdefghijklmnopqrstuvwxyz"
+    /*var c="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    var r,i 
+    for(i=0;i<=c.length-1;i++)
+    {
+    r=c[i] 
+    if(r=="a"|| r=="e"|| r=="i"|| r=="o"|| r=="u"|| r=="A"|| r=="E"|| r=="I"|| r=="O"|| r=="U")  
+    console.log(r) 
+    }*/
+    /*const a="bhuvana"
+    const d=a.replace(/[uva]/au," ")
+    console.log(d)*/
+   /*var buf="abcdefghijklmnopqrstuvwxyz"
+   var si=5
+   var ei=10
+   var totlen=buf.length
+   var buf1=Buffer.alloc(totlen)
+   console.log(buf1)
+   var i=-1;
+   for(x of buf.toString())
+   {
+       i++
+       if(i>=si && i<=ei)
+       {
+           //console.log(buf) or continue
+       }
+       
+       else
+       {
+           buf1.write(x,i)
+       }
+    }
+       console.log(buf1.toString())*/
+       /*var buf=Buffer.from("AbcdEfghIjklmnopqrstuvwxyz")
+       var buf3=Buffer.alloc(buf.length)
+       var i=-1
+       var vow="AEIOUaeiou"
+       for(x of buf.toString())
+       {
+           if(vow.includes(x)) or if(vow.includes(x)==false)
+           {
+           i++
+           buf3.write(x,i)
+           }
+       }
+    
+       console.log(buf3.toString())
+       console.log("Total no. of.consonents or vowels:"+(i+1))*/
+       
+DEBUGGING.JS:
+============
+var i=1
+console.log(i," ")
+var res=""
+console.log("one");
+console.log("two");
+console.log("three");
+while(i<=100)
+{
+    res=res+i+" "
+    i++;
+}
+console.log(res)
+
+SUM OF DIGITS:
+=============
+var n=12345
+var r=0
+var s=0
+while(n!=0)
+{
+    r=n%10
+    s=s+r
+    n=parseInt(n/10)
+}
+console.log("sum of digits:",s)
+
+EMAILVALIDATOR.JS:
+=================
+var eval=require("email-validator")
+var myemail="bhuvana@gamil.com"   //(or) "bhuvana@gmail"  
+if(eval.validate(myemail))
+{
+    console.log("correct email validate success")
+}
+else
+{
+    console.log("invalid email formate failure")
+}
+
+EVENTS DEMO:
+===========
+var events=require("events")
+var eventEmitter=new events.EventEmitter();
+eventEmitter.on("Bhuvana",()=>{
+    console.log("events fired")
+})
+var myfun=()=>{
+    console.log("function called")
+}
+eventEmitter.on("nithu",myfun)
+console.log("first")
+eventEmitter.emit("Bhuvana")
+eventEmitter.emit("nithu")
+console.log("second")
+
+STREAM READ AND WRITE:
+=====================
+var fs=require("fs")
+var readstream=fs.createReadStream("test.txt")
+var writestream=fs.createWriteStream("output.txt")
+readstream.pipe(writestream)
+console.log("successfully copied")
+
+TEST.TXT:
+========
+Iam   in kar ur
+BHUVANA 
+NITHU
+2345
+
+OUTPUT.TXT:
+==========
+bhuvana
+reethi
+nithulya
+
+STREAM DEMO:
+===========
+var fs=require("fs")
+var readerstream=fs.createReadStream("test.txt")
+var ans=""
+var nolines=0
+var wordCount=0
+var pt=null
+var tword=0
+var cap=0
+var sma=0
+var dig=0
+//var v=0
+    readerstream.on("data",(chunk)=>{
+    ans=ans+chunk
+    console.log(chunk)
+    for(x of chunk.toString())
+    {
+        //console.log(x," ")
+        //console.log(String.fromCharCode(65))
+        //console.log(x,"---->",x.charCodeAt(0))
+        if(x.charCodeAt(0)==13)
+        nolines++
+        if(x.charCodeAt(0)==32 || x.charCodeAt(0)==13)
+        wordCount++
+        //additional task:if continuous space(32) in text file
+        ct=x.charCodeAt(0)
+        if((pt==32 && ct!=32) || (ct==13))
+        tword++
+        pt=ct
+        //print alphabets
+        if(x.charCodeAt(0)>=65 && x.charCodeAt(0)<=96)
+         cap++
+         if(x.charCodeAt(0)>=97 && x.charCodeAt(0)<=122)
+         sma++
+         if(x.charCodeAt(0)>=48 && x.charCodeAt(0)<=56)
+         dig++
+        
+        }
+
+})
+    readerstream.on("end",()=>{
+    console.log(ans)
+    console.log("no.of.lines:",nolines)
+    console.log("no.of.wordcount:",wordCount)
+    console.log("no.of.twordcount:",tword)
+    console.log("print capital alphabets:",cap)
+    console.log("print small alphabets:",sma)
+    console.log("print digits:",dig)
+    console.log("data read successfully finished")
+})
+readerstream.on("error",(err)=>{
+    console.log("Error type:",err.toString())
+})
+console.log("program end")
+
+STREAM WRITE:
+============
+var fs=require("fs")
+var writestream=fs.createWriteStream("test1.txt")   //or("") or ("g:/bhuvana")
+writestream.write("welcome to stream writer bhuvana")
+writestream.end()
+writestream.on("finish",()=>{
+    console.log("successfully written")
+})
+writestream.on("error",(err)=>{
+    console.log("Error:"+err.toString())
+})
+console.log("program end")
+
+TEST 1.TXT:
+==========
+welcome to stream writer bhuvana
+
+SYNCHOROUS:
+==========
+var fs=require("fs")
+var data=fs.readFileSync("test.txt")
+console.log(data.toString())
+console.log("program end")
+
+WEBHTML.HTML:
+============
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to web modules</h1>
+</body>
+</html>
+
+WEBHTML1.HTML:
+=============
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to web module1</h1>
+    <h1>welcome to web module2</h1>
+    <h1>welcome to web module3</h1>
+    <h1>welcome to web module4</h1>
+    <h1>welcome to web module5</h1>
+</body>
+</html>
+
+WEBMODULE:
+=========
+var http=require("http")
+var fs=require("fs")
+var url=require("url")
+http.createServer((req,res)=>{
+    var path=url.parse(req.url).pathname
+    res.write(path)
+    //console.log("welcome")
+    //res.end("welcome to browser print"+path)
+    //res.end()
+    fs.readFile(path.substring(1),(err,data)=>{
+        if(err)
+        res.write(err.toString())
+        else
+        {
+         //res.write(data)
+         //res.write(data.toString())
+         console.log(data.toString())
+        }
+    })
+    res.end()
+}).listen(6780)
+console.log("server is running at port number...6780")
+
+PAYMENT DEMO:
+============
+VIEWS:
+=====
+CARDS.JS:
+=======
+const stripe = Stripe('pk_test_51Opn82AOmgjTupsR2Ffm1g7QRATKT4x5CVH0XrlTE0xgfbfT9QtQ0K9TTouHXe6KvxUjVmEp17yQXkkwLAwO9B0c006I34KdSl');
+const elements = stripe.elements();
+
+var style = {
+    base: {
+        color: "#fff"
+    }
+}
+const card = elements.create('card', { style });
+card.mount('#card-element');
+
+const form = document.querySelector('form');
+const errorEl = document.querySelector('#card-errors');
+
+const stripeTokenHandler = token => {
+    const hiddenInput = document.createElement('input');
+    hiddenInput.setAttribute('type', 'hidden');
+    hiddenInput.setAttribute('name', 'stripeToken');
+    hiddenInput.setAttribute('value', token.id);
+    form.appendChild(hiddenInput);
+
+    console.log(form)
+    form.submit();
+}
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    stripe.createToken(card).then(res => {
+        if (res.error) errorEl.textContent = res.error.message;
+        else {
+            console.log(res.token)
+            stripeTokenHandler(res.token);
+        }
+    })
+})
+
+COMPLETE.HTML:
+=============
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title> Completed</title>
+</head>
+
+<body class="bg-gray-900">
+    <nav class="bg-purple-900 h-20 flex justify-center">
+        <h1 class="text-white text-5xl">Stripe Node App</h1>
+    </nav>
+    <div class="flex flex-col items-center mt-32 text-white text-2xl">
+        <p>Thank you for your generous donation.</p>
+        <p>Your payment has been received.</p>
+        <a href="/"><button class="bg-blue-700 rounded p-4 mt-3">Return</button></a>
+    </div>
+</body>
+
+</html>
+
+INDEX.HTML:
+==========
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Stripe Node App</title>
+</head>
+
+<body class="bg-gray-900">
+    <nav class="bg-purple-900 h-20 flex justify-center">
+        <h1 class="text-white text-5xl">Stripe Node App</h1>
+    </nav>
+
+    <div class="flex justify-center mt-32">
+        <form action="http://127.0.0.1:3000/charge" method="POST" class="flex flex-col w-1/3">
+            <input class="bg-transparent text-white p-2 h-10 mb-4" type="text" name="name" placeholder="Name">
+            <input type="email" class="bg-transparent text-white p-2 h-10 mb-4" name="email" placeholder="Email">
+            <input class="bg-transparent text-white p-2 h-10 mb-4" type="text" name="amount" placeholder="Amount">
+
+            <div id="card-element" class="bg-transparent text-white p-2 h-10 mb-4"></div>
+            <div id="card-errors" role="alert"></div>
+            <button class="text-white bg-purple-900 p-4 rounded">Submit Payment</button>
+        </form>
+    </div>
+</body>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script src="card.js"></script>
+
+</html>
+
+SERVER.JS:
+=========
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Stripe Node App</title>
+</head>
+
+<body class="bg-gray-900">
+    <nav class="bg-purple-900 h-20 flex justify-center">
+        <h1 class="text-white text-5xl">Stripe Node App</h1>
+    </nav>
+
+    <div class="flex justify-center mt-32">
+        <form action="http://127.0.0.1:3000/charge" method="POST" class="flex flex-col w-1/3">
+            <input class="bg-transparent text-white p-2 h-10 mb-4" type="text" name="name" placeholder="Name">
+            <input type="email" class="bg-transparent text-white p-2 h-10 mb-4" name="email" placeholder="Email">
+            <input class="bg-transparent text-white p-2 h-10 mb-4" type="text" name="amount" placeholder="Amount">
+
+            <div id="card-element" class="bg-transparent text-white p-2 h-10 mb-4"></div>
+            <div id="card-errors" role="alert"></div>
+            <button class="text-white bg-purple-900 p-4 rounded">Submit Payment</button>
+        </form>
+    </div>
+</body>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script src="card.js"></script>
+
+</html>
+
+MONGODB CONNECTING WITH NODEJS:
+==============================
+DATABASE1:
+=========
+const {MongoClient}=require("mongodb")
+console.log("module ok")
+//const uri="mongodb://127.0.0.1:27017"
+const client=new MongoClient("mongodb://127.0.0.1:27017")
+client.connect()
+console.log("connect success")
+var mydata={rno:2,name:"bhuvana",mark:97}
+try
+{
+    const dataset=client.db("bhu").collection("bell").insertOne(mydata)
+    console.log("successfully inserted")
+    //console.log(dataset)
+    //console.log(JSON.stringify(dataset))
+    //console.log(dataset.toString())
+    dataset.then((result)=>{
+        console.log(result)  //"some user token"
+    })
+}
+catch
+{
+    console.log("error")
+    client.close()
+}
+
+DATABASE2:
+=========
+const {MongoClient}=require("mongodb")
+//console.log("module ok")
+//const uri="mongodb://127.0.0.1:27017"
+const client=new MongoClient("mongodb://127.0.0.1:27017")
+client.connect()
+//console.log("connect success")
+var rere=null
+try
+{
+   const dataset=client.db("bhu").createCollection("off")
+   console.log("success",dataset)
+   dataset.then((res)=>{
+       console.log(res)
+       rere="success"
+   })
+dataset.catch((err)=>{
+    //console.log("error:",err.toString())
+    console.log("already exists collection")
+    rere="failure"
+})
+dataset.finally(()=>{
+    if (rere=="success")
+    console.log("program end with success")
+    else
+    console.log("program end with failure")
+})
+}
+catch
+{
+    console.log("error")
+    client.close()
+}
+
+DATABASE3:
+=========
+const {MongoClient}=require("mongodb")
+const client=new MongoClient("mongodb://127.0.0.1:27017")
+client.connect()
+var mydata={city:"karur"}//{rno:2,nam:"vvv",mark:98}
+var dataset=client.db("bhu").collection("dete").deleteMany(mydata)//.deleteOne(mydata)
+dataset.then((res)=>{
+    console.log(res)
+})
+dataset.catch((err)=>{
+    console.log(err)
+    console.log(err.toString())
+})
+
+DATABASE4:
+=========
+const {MongoClient}=require("mongodb")
+const client=new MongoClient("mongodb://127.0.0.1:27017")
+client.connect()
+//var olddata={mark:20}
+//var newdata={$set:{mark:100}
+var olddata={mark:{$lt:70}}//{mark:{$gte:90}}
+var newdata={$set:{res:"fail"}}//{$set:{res:"pass"}}
+var dataset=client.db("bhu").collection("dete").updateMany(olddata,newdata)
+dataset.then((res)=>{
+    console.log(res)
+})
+dataset.catch((err)=>{
+    console.log("error reason:",err)
+})
+
+DATABASE5:
+=========
+const {MongoClient}=require("mongodb")
+const client=new MongoClient("mongodb://127.0.0.1:27017")
+client.connect()
+var mydata={}
+var dataset=client.db("bhu").collection("dete").find(mydata).toArray()
+//var dataset=client.db("bhu").collection("dete").find({}).toArray()
+dataset.then((res)=>{
+    console.log(res)
+    console.log(typeof(res))
+})
+dataset.catch((err)=>{
+    console.log(err)
+}) 
+
+DATABASE6:
+=========
+ const {MongoClient}=require("mongodb")
+const client=new MongoClient("mongodb://127.0.0.1:27017")
+client.connect()
+var mydata={rno:11}
+//var dataset=client.db("bhu").collection("dete").find(mydata).toArray()
+//var dataset=client.db("bhu").collection("dete").find({}).sort({name:1}).toArray()   //Ascending order
+//var dataset=client.db("bhu").collection("dete").find({}).sort({name:-1}).toArray()    //Decending order
+//var dataset=client.db("bhu").collection("dete").find({}).limit(2).toArray()
+var dataset=client.db("bhu").collection("dete").find({}).skip(2).toArray()
+dataset.then((res)=>{
+    console.log(res)
+    console.log(typeof(res))
+})
+dataset.catch((err)=>{
+    console.log(err)
+})   
+
+CONNECTION TO FRONTEND AND BACKEND IN NODEJS:
+============================================
+DATABASEREACT1.JS:
+=================
+const { MongoClient } = require("mongodb")
+const client = new MongoClient("mongodb://127.0.0.1:27017")
+client.connect()
+//var mydata={rno:13}
+async function showalldata(j) {
+    ans=j
+    try {
+        //const dataset =client.db('bhu').collection('dete').find({rno:10}).toArray().then((res)=>{console.log(res)})
+        const dataset =await client.db('bhu').collection('dete').find({rno:ans}).toArray()
+        //dataset.then((res)=>{
+            //console.log(res)
+        //})
+        //console.log(dataset)
+        //console.log("RESULT:",JSON.stringify(dataset))
+        return JSON.stringify(dataset);
+    }
+    catch {
+        console.log("db closed");
+        await client.close();
+    }
+}
+module.exports = {showalldata};
+
+DATABASEREACT2.JS:
+=================
+const { MongoClient } = require("mongodb")
+const client = new MongoClient("mongodb://127.0.0.1:27017")
+client.connect()
+
+async function showalldata() {
+    try {
+        const dataset = await client.db('bhu').collection('dete').find().toArray();
+        return JSON.stringify(dataset);
+    }
+    catch {
+        console.log("db closed");
+        await client.close();
+    }
+}
+module.exports = {showalldata};
+
+DATABASEREACT3.JS:
+==================
+const { MongoClient } =require("mongodb")
+const client=new MongoClient("mongodb://127.0.0.1:27017")
+
+client.connect()
+//var mydata={sno:8,sname:"gowtham", tamil: 90}
+
+ async function showalldata(mydata)
+ {
+try{
+    const dataset=await client.db("bhu").collection("dete").insertOne(mydata)
+    console.log("success",dataset)
+    return JSON.stringify(dataset)
+}
+catch{
+    console.log("db closed");
+    await client.close();
+}
+ }
+module.exports ={showalldata};
+
+DATABASEREACT4.JS:
+=================
+const { MongoClient }=require("mongodb")
+const client=new MongoClient("mongodb://127.0.0.1:27017")
+
+client.connect()
+//var mydata={sno:8,sname:"gowtham", tamil: 90}
+
+ async function showalldata(k)
+ {
+    mydata={rno:k}
+try{
+    const dataset=await client.db("bhu").collection("dete").deleteOne(mydata)
+    console.log("success")
+    //dataset.then((res)=>{
+        //console.log("===>",res)
+        //return(res)
+    //})
+    //console.log("===>",JSON.stringify(dataset))
+    //return JSON.stringify(dataset)
+    console.log("===>",(dataset))
+    return(dataset)
+}
+catch{
+    console.log("db closed");
+    await client.close();
+}
+ }
+module.exports ={showalldata};
+
+DATABASEREACT5.JS:
+=================
+const { MongoClient } =require("mongodb")
+const client=new MongoClient("mongodb://127.0.0.1:27017")
+
+client.connect()
+//var mydata={sno:8,sname:"gowtham", tamil: 90}
+
+ async function showalldata(k)
+ {
+    mydata={rno:k}
+try{
+    const dataset=await client.db("bhu").collection("dete").findOne(mydata)
+    console.log("success")
+    //dataset.then((res)=>{
+        //console.log("===>",res)
+        //return(res)
+    //})
+    //console.log("===>",JSON.stringify(dataset))
+    //return JSON.stringify(dataset)
+    console.log("===>",(dataset))
+    return(dataset)
+}
+catch{
+    console.log("db closed");
+    await client.close();
+}
+ }
+module.exports ={showalldata};
+
+DATABASEREACT6.JS:
+=================
+const { MongoClient } =require("mongodb")
+const client=new MongoClient("mongodb://127.0.0.1:27017")
+
+client.connect()
+//var mydata={sno:8,sname:"gowtham", tamil: 90}
+
+ async function showalldata(rno,name,mark)
+ {
+    //mydata={rno:k}
+    //var olddt={mark:{$gte:90}}
+    //var newdt={$set:{gr:"very good"}} 
+try{
+    const dataset=await client.db("bhu").collection("dete").updateOne({rno:rno},{$set:{name:name,mark:mark}})
+    console.log("success")
+    //dataset.then((res)=>{
+        //console.log("===>",res)
+        //return(res)
+    //})
+    //console.log("===>",JSON.stringify(dataset))
+    //return JSON.stringify(dataset)
+    console.log("===>",(dataset))
+    return(dataset)
+}
+catch{
+    console.log("db closed");
+    await client.close();
+}
+ }
+module.exports ={showalldata};
+
+DATABASESERVER1.JS:
+==================
+var http=require("http")
+var url=require("url")
+var database=require("./databasereact1")   //connect to mongodb showalldata function
+
+http.createServer(async(req,res)=>{
+    res.setHeader('Access-Control-Allow-Origin', '*'); /* @dev First, read about security */
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+    res.setHeader('Access-Control-Max-Age', 2592000); // 30 days
+    console.log(req.url)
+    //console.log(JSON.stringify(req.url))   //show with double quotes
+    //console.log(req.query.myrno)
+    //console.log(req.query.myname)
+    var argdata=url.parse(req.url,true)
+    console.log(argdata)
+    console.log(argdata.query)
+    finalres=JSON.parse(JSON.stringify(argdata.query))
+    console.log(finalres)
+
+    //if (req.url=="/api/bhuvana/")
+    //{
+        try{
+    res.writeHead(200, {'Content-Type':'application/json'})
+    const dataset=await database.showalldata(parseInt(finalres.myrno))
+    console.log("ANSWER:",dataset)
+    res.write(dataset)
+        }
+        finally{
+            res.end()  // must
+        }
+   // }
+    
+}).listen(4001)
+
+console.log("port listing at ... 4001")
+
+DATABASESERVER2.JS:
+==================
+var http=require("http")
+var database=require("./databasereact1")   //connect to mongodb showalldata function
+
+http.createServer(async(req,res)=>{
+    res.setHeader('Access-Control-Allow-Origin', '*'); /* @dev First, read about security */
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+    res.setHeader('Access-Control-Max-Age', 2592000); // 30 days
+
+    if (req.url=="/api/gowtham")
+    {
+        try{
+    res.writeHead(200, {'Content-Type':'application/json'})
+    const dataset=await database.showalldata()
+    res.write(dataset)
+        }
+        finally{
+            res.end()  // must
+        }
+    }
+}).listen(4000)
+
+console.log("port listing at ... 4000")
+
+DATABASESERVER3.JS:
+==================
+var http=require("http")
+var url=require("url")
+var database=require("./databasereact3")           //connect to mongodb showalldata function
+http.createServer(async(req,res)=>{
+     res.setHeader('Access-Control-Allow-Origin','*'); /*@dev first read about security */
+     res.setHeader('Access-Control-Allow-Methods','OPTIONS,GET');
+     res.setHeader('Access-Control-Max-Age',2592000);    //30 days
+    console.log(req.url)
+    var argdata=url.parse(req.url,true)
+    console.log(argdata)
+    console.log(argdata.query)
+    finalres=JSON.parse(JSON.stringify(argdata.query))
+    console.log(finalres)
+
+    //if(req.url=="/api/thamil")
+    //{
+        try{
+            res.writeHead(200, {'content-Type':'application/json'})
+    const dataset=await database.showalldata(finalres)
+    console.log("mmmmmm:",dataset)
+    res.write(dataset)
+        }
+        finally{
+            res.end()    //must
+        }
+
+    //}
+
+}).listen(4002)
+
+console.log("port listening at.....4002")
+
+DATABASESERVER4.JS:
+==================
+var http=require("http")
+var url=require("url")
+var database=require("./databasereact4")           //connect to mongodb showalldata function
+http.createServer(async(req,res)=>{
+     res.setHeader('Access-Control-Allow-Origin','*'); /*@dev first read about security */
+     res.setHeader('Access-Control-Allow-Methods','OPTIONS,GET');
+     res.setHeader('Access-Control-Max-Age',2592000);    //30 days
+    console.log(req.url)
+    var argdata=url.parse(req.url,true)
+    console.log(argdata)
+    console.log(argdata.query)
+    finalres=JSON.parse(JSON.stringify(argdata.query))
+    console.log(finalres)
+
+    //if(req.url=="/api/thamil")
+    //{
+        try{
+            res.writeHead(200, {'content-Type':'application/json'})
+    const dataset=await database.showalldata(parseInt(finalres.rno))
+    console.log("data deleted:",dataset)
+    res.write(JSON.stringify(dataset))
+        }
+        finally{
+            res.end()    //must
+        }
+
+    //}
+
+}).listen(4003)
+
+console.log("port listening at.....4003")
+
+DATABASESERVER5.JS:
+==================
+var http=require("http")
+var url=require("url")
+var database=require("./databasereact5")           //connect to mongodb showalldata function
+http.createServer(async(req,res)=>{
+     res.setHeader('Access-Control-Allow-Origin','*'); /*@dev first read about security */
+     res.setHeader('Access-Control-Allow-Methods','OPTIONS,GET');
+     res.setHeader('Access-Control-Max-Age',2592000);    //30 days
+    console.log(req.url)
+    var argdata=url.parse(req.url,true)
+    console.log(argdata)
+    console.log(argdata.query)
+    finalres=JSON.parse(JSON.stringify(argdata.query))
+    console.log(finalres)
+
+    //if(req.url=="/api/thamil")
+    //{
+        try{
+            res.writeHead(200, {'content-Type':'application/json'})
+    const dataset=await database.showalldata(parseInt(finalres.rno))
+    console.log("data deleted:",dataset)
+    res.write(JSON.stringify(dataset))
+        }
+        finally{
+            res.end()    //must
+        }
+
+    //}
+
+}).listen(4004)
+
+console.log("port listening at.....4004")
+
+DATABASESERVER6.JS:
+==================
+var http=require("http")
+var url=require("url")
+var database=require("./databasereact6")           //connect to mongodb showalldata function
+http.createServer(async(req,res)=>{
+     res.setHeader('Access-Control-Allow-Origin','*'); /*@dev first read about security */
+     res.setHeader('Access-Control-Allow-Methods','OPTIONS,GET');
+     res.setHeader('Access-Control-Max-Age',2592000);    //30 days
+    console.log(req.url)
+    var argdata=url.parse(req.url,true)
+    console.log(argdata)
+    console.log(argdata.query)
+    finalres=JSON.parse(JSON.stringify(argdata.query))
+    console.log(finalres)
+
+    //if(req.url=="/api/thamil")
+    //{
+        const rno=parseInt(finalres.rno)
+        const name=finalres.name
+        const mark=parseInt(finalres.mark)
+        try{
+            res.writeHead(200, {'content-Type':'application/json'})
+    const dataset=await database.showalldata(rno,name,mark)
+    console.log("data deleted:",dataset)
+    res.write(JSON.stringify(dataset))
+        }
+        finally{
+            res.end()    //must
+        }
+
+    //}
+
+}).listen(4005)
+
+console.log("port listening at.....4005")
+
+DATABASESERVER7.JS:(CLOUD)
+==================
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://bhukathirm98:rTsoH0N87bMhW2tu@cluster0.d9mxffa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+
+async function run() {
+    var mydata={
+        billno:2400002,
+        sname:"reethi",
+        course:"FULLSTACK",
+        date:"16-mar-2024",
+        billamt:6000
+    }
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    var dataset=await client.db("billing").collection("details").insertOne(mydata)
+    console.log(dataset);
+    console.log(JSON.stringify(dataset));
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);
+
+
+
+
+
+
 
