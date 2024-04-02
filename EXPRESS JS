@@ -1,1 +1,185 @@
+EXPRESS PROGRAM 1:(.JS)
+=================
+const { response } = require("express")
+var exp=require("express")
+const { request } = require("http")
+console.log("module ok")
+var app=new exp()
+app.get("/testfun",(req,res)=>{
+//var mydata=req.query["t1"]
+var mydata1=parseInt(req.query["t1"])
+var mydata2=parseInt(req.query["t2"])
+var tot=mydata1+mydata2
+//res.send("<h1>This is simple Express js:"+mydata+"</h1>")  //browser print
+res.send("<h1>This is simple Express js:"+tot+"</h1>")  //browser print
+})//.listen(8901)
+//console.log("port listening at 8901...")
+var server=app.listen(8902,(request,response)=>{
+    var portno=server.address().port
+    console.log("port listening at ...",portno)
+})
+
+EXPRESS PROGRAM :(.HTML)
+=======================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>Express Demo</h1></center>
+    <form action="http://127.0.0.1:8901/testfun">
+    <!-- <input type="text" placeholder="Enter your name" name="t1"> -->
+    <!--input type="submit" value="clickme"-->
+    <input type="text" placeholder="Enter number1" name="t1">
+    <input type="text" placeholder="Enter number2" name="t2">
+    <input type="submit" value="total">
+</form>
+</body>
+</html>
+
+EXPRESS PROGRAM:(.JS)
+=====================
+var exp=require("express")
+var app=new exp()
+var bp=require("body-parser")
+var urlcodeparser=bp.urlencoded({extended:false})
+app.post("/processpost",urlcodeparser,(req,res)=>{
+    var un=req.body.t1
+    var pw=req.body.t2
+    if(un=="admin" && pw=="pass@123")
+    res.sendFile(__dirname+"\\success.html")
+    else
+    res.sendFile(__dirname+"\\failure.html")
+    //res.send("<h1>UserName:"+un+"</h1>"+"<h1>PassWord:"+pw+"</h1>")
+}).listen(8903)
+console.log("port listening at...8903")
+
+SUCCESS.HTML:
+============
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="green">
+    <center>
+        <h1>SUCCESS</h1>
+    </center>
+</body>
+</html>
+
+FAILURE.HTML:
+============
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="red">
+    <center>
+        <h1>FAILURE</h1>
+    </center>
+</body>
+</html>
+
+EXPRESS PROGRAM:(.HTML)
+======================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:8903/processpost" method="post">
+    <input type="text" placeholder="Enter your name" name="t1">
+    <input type="password" placeholder="Enter password" name="t2">
+    <input type="submit" value="clickme">
+    </form>
+</body>
+</html>
+
+EXPRESS PROGRAM:(.JS)
+=====================
+var exp=require("express")
+var app=new exp()
+var bp=require("body-parser")
+var urlcodeparser=bp.urlencoded({extended:false})
+app.post("/processpost",urlcodeparser,(req,res)=>{
+    var un=req.body.t1
+    var pw=req.body.t2
+    var output={
+        mydata1:un,
+        mydata2:pw,
+        mydata3:200,
+        100:300,
+        a1:111
+    }
+    console.log("data:",output)
+    console.log("data:",JSON.stringify(output))
+    res.send(JSON.stringify(output))
+}).listen(8903)
+console.log("port listening at...8903")
+
+SOCKETIO.JS:
+===========
+var exp=require("express")
+var app=new exp()
+
+const http=require("http")
+//const { Socket } = require("net")
+let server=http.createServer(app)
+
+var socketIo=require("socket.io")
+var io=socketIo(server)
+
+//called function
+io.on("connection",(socket)=>{
+   socket.on("myevent",(result)=>{
+    console.log("data from client",result.to)
+    console.log("email from client",result.email)
+   })
+})
+
+app.get("/",(req,res)=>{
+    res.sendFile(__dirname+"/socketdemo.html")
+})
+
+server.listen(3481)
+console.log("port listening at 3481...")
+
+SOCKET.HTML:
+===========
+<!--Javascript Files-->
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+    function dis()
+    {
+        var mydata=document.getElementById("t1").value;
+        var myemail=document.getElementById("t2").value;
+        var socket=io();
+        socket.emit("myevent",{
+            to:mydata,
+            email:myemail
+        })
+    }
+</script>
+</head>
+<body>
+   <form>
+    <input type="text" id="t1" placeholder="enter data:"><br>
+    <input type="email" id="t2" placeholder="enter email:"><br>
+    <input type="button" value="send data to server" onClick="dis()">
+   </form>
+</body>
+</html>
+
 
