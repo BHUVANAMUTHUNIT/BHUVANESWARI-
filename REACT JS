@@ -1321,7 +1321,7 @@ function App()
     var e=parseInt(document.getElementById("t5").value)
     //var f=a+b+c+d+e
     //document.getElementById("tot").innerHTML="Total:"+f
-    document.getElementById("tot").innerHTML=a+b+c+d+e
+    document.getElementById("tot").innerHTML=a+b+c+d+e*/
     document.getElementById("tot").innerHTML=ans
   }
   return(
@@ -1404,3 +1404,1442 @@ function App()
   )
 }
 export default App
+
+EVENT TARGET VALUE 3:
+====================
+function App()
+{
+  var ans=0
+  const findtot=(v)=>{
+    ans=ans+parseInt(v)
+   /* var a=parseInt(document.getElementById("t1").value)
+    var b=parseInt(document.getElementById("t2").value)
+    var c=parseInt(document.getElementById("t3").value)
+    var d=parseInt(document.getElementById("t4").value)
+    var e=parseInt(document.getElementById("t5").value)
+  document.getElementById("tot").innerHTML=a+b+c+d+e*/
+    document.getElementById("tot").innerHTML=ans
+  }
+  return(
+    <>
+    <h1>Event.Target.Value</h1>
+    <input type="text" id="t1" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t2" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t3" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t4" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="text" id="t5" onChange={(e)=>findtot(e.target.value)}></input>
+    <input type="button" onClick={findtot} value="find total:"></input>
+    <div id="tot"></div>
+  
+
+    </>
+  )
+}
+export default App
+
+EVENT TARGET VALUE 4:
+====================
+function App()
+{
+  var ans=0
+  const findtot=(event)=>{
+    if(event.target.id==="t1")
+    document.getElementById("s1").innerHTML=event.target.value
+    if(event.target.id==="t2")
+    document.getElementById("s2").innerHTML=event.target.value
+    if(event.target.id==="t3")
+    document.getElementById("s3").innerHTML=event.target.value
+    if(event.target.id==="t4")
+    document.getElementById("s4").innerHTML=event.target.value
+    if(event.target.id==="t5")
+    document.getElementById("s5").innerHTML=event.target.value
+    document.getElementById("tot").innerHTML=ans
+  }
+  return(
+    <>
+    <h1>Event target--value</h1>
+    <input type="text" id="t1" onChange={(e)=>findtot(e)}></input><span id="s1"></span>
+    <input type="text" id="t2" onChange={(e)=>findtot(e)}></input><span id="s2"></span>
+    <input type="text" id="t3" onChange={(e)=>findtot(e)}></input><span id="s3"></span>
+    <input type="text" id="t4" onChange={(e)=>findtot(e)}></input><span id="s4"></span>
+    <input type="text" id="t5" onChange={(e)=>findtot(e)}></input><span id="s5"></span>
+    <div id="tot"></div>
+    </>
+  )
+}
+export default App
+
+EVENT TARGET VALUE 5:
+====================
+function App()
+{
+  var ans=0
+  const findtot=(event)=>{
+    document.getElementById("s"+(event.target.id).charAt(1)).innerHTML=event.target.value
+    /*if(event.target.id==="t1")
+    document.getElementById("s1").innerHTML=event.target.value
+    if(event.target.id==="t2")
+    document.getElementById("s2").innerHTML=event.target.value
+    if(event.target.id==="t3")
+    document.getElementById("s3").innerHTML=event.target.value
+    if(event.target.id==="t4")
+    document.getElementById("s4").innerHTML=event.target.value
+    if(event.target.id==="t5")
+    document.getElementById("s5").innerHTML=event.target.value*/
+    document.getElementById("tot").innerHTML=ans
+  }
+  return(
+    <>
+    <h1>Event target--value</h1>
+    <input type="text" id="t1" onChange={(e)=>findtot(e)}></input><span id="s1"></span>
+    <input type="text" id="t2" onChange={(e)=>findtot(e)}></input><span id="s2"></span>
+    <input type="text" id="t3" onChange={(e)=>findtot(e)}></input><span id="s3"></span>
+    <input type="text" id="t4" onChange={(e)=>findtot(e)}></input><span id="s4"></span>
+    <input type="text" id="t5" onChange={(e)=>findtot(e)}></input><span id="s5"></span>
+    <div id="tot"></div>
+    </>
+  )
+}
+export default App
+
+EVENT TARGET NAME:
+=================
+function App()
+{
+  const show=(event)=>{
+    if(event.target.name==="rno")
+    document.getElementById("r1").innerHTML=event.target.value
+    if(event.target.name==="name")
+    document.getElementById("r2").innerHTML=event.target.value
+    if(event.target.name==="mark")
+    document.getElementById("r3").innerHTML=event.target.value
+  }
+  return(
+    <>
+    <h1>Event target---name</h1>
+      <input type="text"  onChange={(e)=>show(e)} name="rno" placeholder="enter rno"></input><br></br>
+      <input type="text"  onChange={(e)=>show(e)} name="name" placeholder="enter name"></input><br></br>
+      <input type="text"  onChange={(e)=>show(e)} name="mark" placeholder="enter mark"></input><br></br>
+      <div id="r1"></div>
+      <div id="r2"></div>
+      <div id="r3"></div>
+    </>
+  )
+}
+export default App
+
+EVENT TARGET-TAGNAME :
+====================
+function App()
+{
+  const show=(event)=>{
+    if(event.target.tagName==="INPUT")
+    document.getElementById("r1").innerHTML="you are typing in textbox..."
+    else if(event.target.tagName==="TEXTAREA")
+    document.getElementById("r1").innerHTML="you are typing in addressbox..."
+    else if(event.target.tagName==="SELECT")
+    document.getElementById("r1").innerHTML="you are changing month..."
+    else if(event.target.tagName==="BUTTON")
+    document.getElementById("r1").innerHTML="you are clicking button..."
+  }
+  return(
+    <>
+    <h1>Event target--tagname</h1>
+    <input type="text" onChange={(e)=>show(e)} placeholder="enter username:"></input><br></br>
+    Enter Address:<textarea row="5" cols="25" onChange={(e)=>show(e)}></textarea><br></br>
+    <select onChange={(e)=>show(e)}>
+    <option>January</option>
+    <option>February</option>
+    <option>March</option>
+    <option>April</option>
+    <option>May</option>
+    <option>June</option>
+    <option>July</option>
+    <option>September</option>
+    <option>October</option>
+    <option>November</option>
+    <option>December</option>
+    </select>
+    <button onClick={(e)=>show(e)}>clickme</button>
+    <div id="r1"></div>
+    </>
+  )
+}
+export default App
+
+EVENT TARGET TYPE:
+=================
+function App()
+{
+  const show=(event)=>{
+    if(event.target.type==="text")
+    document.getElementById("r1").innerHTML="you are typing textbox..."
+    else if(event.target.type==="password")
+    document.getElementById("r1").innerHTML="you are typing password..."
+    else if(event.target.type==="email")
+    document.getElementById("r1").innerHTML="you are typing email..."
+    else if(event.target.type==="date")
+    document.getElementById("r1").innerHTML="you are changing date..."
+    else if(event.target.type==="week")
+    document.getElementById("r1").innerHTML="you are changing week..."
+    else if(event.target.type==="month")
+    document.getElementById("r1").innerHTML="you are changing month..."
+    else if(event.target.type==="textarea")
+    document.getElementById("r1").innerHTML="you are typing in address box..."
+    else if(event.target.type==="radio")
+    document.getElementById("r1").innerHTML="you are selecting gender..."
+    else if(event.target.type==="checkbox")
+    document.getElementById("r1").innerHTML="you are selecting courses..."
+    else if(event.target.type==="number")
+    document.getElementById("r1").innerHTML="you are typing a number..."
+    else if(event.target.type==="time")
+    document.getElementById("r1").innerHTML="you are changing time..."
+    else if(event.target.type==="button")
+    document.getElementById("r1").innerHTML="you are clicking a button..."
+    else
+    document.getElementById("r1").innerHTML="Others"
+  }
+  return(
+    <>
+    <h1>Event target--type</h1>
+    USERNAME:<input type="text" onChange={(e)=>show(e)} placeholder="enter username"></input><br></br>
+    PASSWORD:<input type="password" onChange={(e)=>show(e)} placeholder="enter password"></input><br></br>
+    EMAIL:<input type="email" onChange={(e)=>show(e)} placeholder="enter email"></input><br></br>
+    DATE:<input type="date" onChange={(e)=>show(e)} placeholder="enter date"></input><br></br>
+    {/*WEEK:<select onChange={(e)=>show(e)}>
+      <option>Sunday</option>
+      <option>Monday</option>
+      <option>Tuesday</option>
+      <option>Wednesday</option>
+      <option>Thursday</option>
+      <option>Friday</option>
+      <option>Saturday</option>
+      </select>*/}
+  <br></br>
+    ENTER ADDRESS:<textarea row="5" cols="25" onChange={(e)=>show(e)}></textarea><br></br>
+    {/*MONTH:<select type="select" onChange={(e)=>show(e)}>
+    <option>January</option>
+    <option>February</option>
+    <option>March</option>
+    <option>April</option>
+    <option>May</option>
+    <option>June</option>
+    <option>July</option>
+    <option>September</option>
+    <option>October</option>
+    <option>November</option>
+    <option>December</option>
+    </select>*/}
+    <br></br>
+    SELECT GENDER:<input type="radio" onChange={(e)=>show(e)}></input>Male
+    <input type="radio" onChange={(e)=>show(e)}></input>FeMale
+    <input type="radio" onChange={(e)=>show(e)}></input>Others
+    <br></br>
+    SELECT COURSES:<input type="checkbox" onChange={(e)=>show(e)}></input>C
+    <input type="checkbox" onChange={(e)=>show(e)}></input>C++
+    <input type="checkbox" onChange={(e)=>show(e)}></input>Java
+    <input type="checkbox" onChange={(e)=>show(e)}></input>Python
+    <input type="checkbox" onChange={(e)=>show(e)}></input>Tally
+    <br></br>
+    <input type="number" onChange={(e)=>show(e)}></input><br></br>
+    <input type="time" onChange={(e)=>show(e)}></input><br></br>
+    <input type="week" onChange={(e)=>show(e)}></input><br></br>
+    <input type="month" onChange={(e)=>show(e)}></input><br></br>
+    <button type="button" onClick={(e)=>show(e)}>clickme</button>
+    <div id="r1"></div>
+    </>
+  )
+}
+export default App
+
+EVENT TARGET TYPE 1:
+===================
+function App()
+{
+  const show=(event)=>{
+    document.getElementById("r1").innerHTML="you are using...."+event.target.type
+  }
+  return(
+    <>
+    <h1>Event target--type</h1>
+    USERNAME:<input type="text" onChange={(e)=>show(e)} placeholder="enter username"></input><br></br>
+    PASSWORD:<input type="password" onChange={(e)=>show(e)} placeholder="enter password"></input><br></br>
+    EMAIL:<input type="email" onChange={(e)=>show(e)} placeholder="enter email"></input><br></br>
+    DATE:<input type="date" onChange={(e)=>show(e)} placeholder="enter date"></input><br></br>
+    RANGE:<input type="range" onChange={(e)=>show(e)} min="0" max="10"></input>
+    <div id="r1"></div>
+    </>
+  )
+}
+export default App
+
+EVENT TARGET TYPE 2:
+===================
+function App()
+{
+  var tot=0
+  const show=(event)=>{
+    if(event.target.type==="number")
+    {
+     tot=parseInt(tot)+parseInt(event.target.value)
+     document.getElementById("r1").innerHTML="Total:"+tot
+    }
+  }
+  /*var ans=0
+  const show=(v)=>{
+    ans=ans+parseInt(v)
+document.getElementById("r1").innerHTML="Total:"+ans
+var a=parseInt(document.getElementById("t1").value)
+var b=parseInt(document.getElementById("t2").value)
+var c=parseInt(document.getElementById("t3").value)
+var d=a+b+c
+document.getElementById("r1").innerHTML="Total:"+d*/
+return(
+    <>
+    <h1>Event target--type</h1>
+    <input type="text" onBlur={(e)=>show(e)}></input><br></br>
+    <input type="number" onBlur={(e)=>show(e)}></input><br></br>
+<input type="text" onBlur={(e)=>show(e)}></input><br></br>
+    <input type="number" onBlur={(e)=>show(e)}></input><br></br>
+<input type="number" onBlur={(e)=>show(e)}></input><br></br>
+    <div id="r1"></div>
+    </>
+  )
+}
+export default App
+
+REACT HOOKS USESTATE:
+====================
+import {useState} from 'react'
+function App()
+{
+  const[name,setName]=useState("****")
+  const show=(event)=>{
+    setName(event.target.value)
+  }
+  return(
+    <>
+    <h1>React textbox issue -we can't change text</h1>
+    <h1>problem overcome using hook</h1>
+    <input type="text" onChange={(e)=>show(e)} value={name}></input>
+    </>
+  )
+}
+export default App
+
+REACT HOOKS USESTATE 1:
+======================
+import {useState} from 'react'
+function App()
+{
+  const[name,setName]=useState("")
+  const[city,setCity]=useState("")
+  const show=(event)=>{
+    if(event.target.id==="t1")
+    setName(event.target.value)
+    if(event.target.id==="t2")
+    setCity(event.target.value)
+  }
+  return(
+    <>
+    <h1>React textbox issue -we can't change text</h1>
+    <h1>problem overcome using hook</h1>
+    Enter Username:<input type="text" id="t1" onChange={(e)=>show(e)} value={name}></input><br></br>
+    Enter City:<input type="text" id="t2" onChange={(e)=>show(e)} value={city}></input>
+    </>
+  )
+}
+export default App
+
+REACT HOOKS USEEFFECT AND USESTATE:
+==================================
+import {useState, useEffect} from 'react'
+function App()
+{
+  const[title,setTitle]=useState("bhuvana")
+  useEffect(()=>{
+document.title=title
+  })
+  const show=()=>{
+    setTitle("nithu")
+  }
+return(
+  <>
+  <h1>UseEffect Hooks</h1>
+  <h1>Default title:{title}</h1>
+  <button onClick={show}>clickme</button> 
+  </>
+)
+}
+export default App
+
+REACT HOOKS USESTATE AND USEEFFECT 1:
+====================================
+import {useState, useEffect} from 'react'
+function App()
+{
+  const[title,setTitle]=useState("bhuvana")
+  var k=0
+  useEffect(()=>{
+document.title=title + ++k
+console.log("use effect",++k)
+  })
+  const show=(event)=>{
+    setTitle(event.target.value)
+  }
+  const show1=(event)=>{
+    event.preventDefault()
+  }
+return(
+  <>
+  <h1>UseEffect Hooks</h1>
+  <h1>Default title:{title}:{++k}</h1>
+  <input type="text" onChange={(e)=>show(e)} value={title} placeholder="enter title to change"></input>
+  <button onClick={(e)=>show1(e)}>clickme</button> 
+  </>
+)
+}
+export default App
+
+REACT HOOKS USEFORM:
+===================
+import {useForm} from 'react-hook-form'
+function App()
+{
+const {register,handleSubmit}=useForm()
+const show=(data)=>{
+  console.log(data)
+  document.getElementById("r1").innerHTML=data.un
+  document.getElementById("r2").innerHTML=data.pw
+  document.getElementById("r3").innerHTML=data.dob
+  document.getElementById("r4").innerHTML=data.mark
+  document.getElementById("r5").innerHTML=data.gender
+}
+return(
+  <>
+  <h1>React Hook Form</h1>
+  <form onSubmit={handleSubmit(show)}>
+<input type="text" name="un" placeholder='enter user name' {...register("un")}></input><br></br>
+<input type="password" name="pw" placeholder='enter password' {...register("pw")}></input><br></br>
+<input type="date" name="dob"{...register("dob")}></input><br></br>
+<input type="number" name="mark" placeholder='enter mark' {...register("mark")}></input><br></br>
+<input type="radio" name="gender" value="Male" {...register("gender")}></input>Male<br></br>
+<input type="radio" name="gender" value="Female" {...register("gender")}></input>Female<br></br>
+<input type="radio" name="gender" value="Others" {...register("gender")}></input>Others<br></br>
+<input type="submit" value="clickme"></input><br></br>
+<div id="r1"></div>
+<div id="r2"></div>
+<div id="r3"></div>
+<div id="r4"></div>
+<div id="r5"></div>
+  </form>
+  </>
+)
+}
+export default App
+
+ERROR HANDLING:
+==============
+import {useForm} from 'react-hook-form'
+function App()
+{
+  const {register,handleSubmit,formState:{errors}}=useForm()
+  const dis=(data)=>{
+    console.log(data)
+  }
+return(
+  <>
+  <form onSubmit={handleSubmit(dis)}>
+  <h1>Error Handling</h1>
+  {/*<input type="text" name="un" placeholder='enter user name' {...register("un",{required:true,pattern:/^[a-z]+$/})}></input>
+  {errors.un && errors.un.type==="required" && <font color="red">* must fill user name </font>}
+  {errors.un && errors.un.type==="pattern" && <font color="red">* only type small a-z</font>}<br></br>
+  {/*<input type="text" name="un" placeholder='enter user name' {...register("un",{required:true,pattern:/^[A-Z]+$/})}></input>
+  {errors.un && errors.un.type==="required" && <font color="red">* must fill user name </font>}
+  {errors.un && errors.un.type==="pattern" && <font color="red">* only type capital A-Z</font>}<br></br>
+  {/*<input type="text" name="un" placeholder='enter user name' {...register("un",{required:true,pattern:/^[a-z]{5}$/})}></input>
+  {errors.un && errors.un.type==="required" && <font color="red">* must fill user name </font>}
+  {errors.un && errors.un.type==="pattern" && <font color="red">* only type small a-z</font>}<br></br>
+  {/*<input type="text" name="un" placeholder='enter user name' {...register("un",{required:true,pattern:/^[A-Z]{5}$/})}></input>
+  {errors.un && errors.un.type==="required" && <font color="red">* must fill user name </font>}
+  {errors.un && errors.un.type==="pattern" && <font color="red">* only type capital A-Z</font>}<br></br>
+  <input type="number" name="un" placeholder='enter number' {...register("un",{required:true,pattern:/^[0-9]{10}$/})}></input>
+  {errors.un && errors.un.type==="required" && <font color="red">* must fill numbers</font>}
+  {errors.un && errors.un.type==="pattern" && <font color="red">* only type numbers 0-9 / only 10 numbers</font>}<br></br>
+  <input type="password" name="pw" placeholder='enter password' {...register("pw",{required:true,minLength:8,maxLength:12})}></input>
+  {errors.pw && errors.pw.type==="required" && <font color="red">* must fill password </font>}
+  {errors.pw && errors.pw.type==="minLength" && <font color="red">* min char: 8 need </font>}
+  {errors.pw && errors.pw.type==="maxLength" && <font color="red">* max char: 12 exceeded </font>}<br></br>
+  <input type="submit" value="clickme"></input><br></br>
+  </form>
+  </>
+)
+}
+export default App
+
+
+REACT HOOKS ERROR HANDLING:
+==========================
+import {useForm} from 'react-hook-form'
+function App()
+{
+  const {register,handleSubmit,formState:{errors}}=useForm()
+  const dis=(data)=>{
+    console.log(data)
+  }
+return(
+  <>
+  <form onSubmit={handleSubmit(dis)}>
+  <h1>Error Handling</h1>
+  <input type="text" name="un" placeholder='enter user name' {...register("un",{required:true,pattern:/^[a-z]+$/})}></input>
+  {errors.un && errors.un.type==="required" && <font color="red">* must fill user name </font>}
+  {errors.un && errors.un.type==="pattern" && <font color="red">* only type small a-z</font>}<br></br>
+  <input type="text" name="cap" placeholder='enter user name' {...register("cap",{required:true,pattern:/^[A-Z]+$/})}></input>
+  {errors.cap && errors.cap.type==="required" && <font color="red">* must fill user name </font>}
+  {errors.cap && errors.cap.type==="pattern" && <font color="red">* only type capital A-Z</font>}<br></br>
+  {/*<input type="text" name="un" placeholder='enter user name' {...register("un",{required:true,pattern:/^[a-z]{5}$/})}></input>
+  {errors.un && errors.un.type==="required" && <font color="red">* must fill user name </font>}
+  {errors.un && errors.un.type==="pattern" && <font color="red">* only type small a-z</font>}<br></br>
+  <input type="text" name="un" placeholder='enter user name' {...register("un",{required:true,pattern:/^[A-Z]{5}$/})}></input>
+  {errors.un && errors.un.type==="required" && <font color="red">* must fill user name </font>}
+  {errors.un && errors.un.type==="pattern" && <font color="red">* only type capital A-Z</font>}<br></br>
+  <input type="number" name="num" placeholder='enter number' {...register("num",{required:true,pattern:/^[0-9]{10}$/})}></input>
+  {errors.num && errors.num.type==="required" && <font color="red">* must fill numbers</font>}
+  {errors.num && errors.num.type==="pattern" && <font color="red">* only type numbers 0-9 / only 10 numbers</font>}<br></br>
+  <input type="text" name="spl" placeholder='enter spl char' {...register("spl",{required:true,pattern:/^[^a-zA-Z0-9]+$/})}></input>
+  {errors.spl && errors.spl.type==="required" && <font color="red">* must fill numbers</font>}
+  {errors.spl && errors.spl.type==="pattern" && <font color="red">* only spl char</font>}<br></br>
+  <input type="password" name="pw" placeholder='enter password' {...register("pw",{required:true,minLength:8,maxLength:12})}></input>
+  {errors.pw && errors.pw.type==="required" && <font color="red">* must fill password </font>}
+  {errors.pw && errors.pw.type==="minLength" && <font color="red">* min char: 8 need </font>}
+  {errors.pw && errors.pw.type==="maxLength" && <font color="red">* max char: 12 exceeded </font>}<br></br>
+  <input type="submit" value="clickme"></input><br></br>
+  </form>
+  </>
+)
+}
+export default App
+
+REACT LIFECYCLE METHOD-MOUNTING (COMPONENTS):
+===============================
+import React from 'react'
+class App extends React.Component
+{
+  constructor(props)  //before render one time callimg
+  {
+    super(props)
+    this.state=this.props.data
+    
+  }
+  render()    //always calling
+  {
+  return(
+    <>
+       <h1>React lifecycle components</h1>
+       <h1>Type 1: Mounting (i.constructor ii.render() iii.ComponentDidMount</h1>
+        <h1>RNO:{this.state.rno}</h1>
+        <h2>SNAME:{this.state.name}</h2>
+        <h2>MARK:{this.state.mark}</h2>
+        <div id="res1"></div>
+        <div id="res2"></div>
+    </>
+  )
+}
+shouldComponentUpdate()  //after render
+{
+return true
+}
+getSnapshotBeforeUpdate(prevProps,prevState)  //after should component update + true
+{
+  document.getElementById("res1").innerHTML="<h1> Old Values:</h1><h2>Rollno:"+prevState.rno+"<br>Name:"+prevState.name+"<br>Mark:"+prevState.mark+"</h2>"
+}
+componentDidMount()  //after should component update + return must be true
+{
+  setTimeout(()=>{
+    this.setState({mark:300,name:"muthu",rno:56})
+  },5000)
+}
+componentDidUpdate()    //after component did mount
+{
+  document.getElementById("res2").innerHTML="<h1>update success</h1>"
+}
+}
+export default App
+
+HTTP AND AXIOS:
+==============
+import axios from "axios"
+//import './App.css'
+import {useState} from 'react'
+function App()
+{
+  const [city,setCity]=useState("")
+  const[output,setOutput]=useState(null)
+  const updatecity=(event)=>{
+    setCity(event.target.value)
+  }
+  const findreport=()=>{
+    document.getElementById("res1").innerHTML=""
+    const wapi=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8a0f210b4a896240d0350d0fa4616b8f`
+  console.log(wapi)
+  if(city.length>2)
+  {
+    axios.get(wapi).then((res)=>{
+      console.log(res.data)
+      setOutput(res.data)
+    }).catch((err)=>{
+      console.log(err.response.data)
+      setOutput(err.response.data)
+    }).finally(()=>{
+      document.getElementById("res2").innerHTML="====Report End===="
+    })
+  }
+  else
+  {
+    document.getElementById("res1").innerHTML="city name atleast 3 chars"
+  }
+  }
+return(
+  <>
+  <h1>API handling using React and Axios HTTP header</h1>
+  <input type="text" onChange={(e)=>updatecity(e)} value={city} placeholder="Enter City Name:"></input><br></br>
+  <input type="button" onClick={findreport} value="weather report"></input><br></br> 
+  <div id="res1"></div>
+  {output!==null && output.cod===200 && <>
+  <h2>Weather Report1:{output.weather[0].main}</h2>
+  <h2>Weather Report2:{output.weather[0].description}</h2>
+  <h2>Temperature:{output.main.temp}</h2>
+  </>}
+  {output!==null && output.cod==="404" && <>
+  <h2>Result:{output.message}</h2>
+  </>}
+  <div id="res2"></div>
+  </>
+)
+}
+export default App
+
+REACT LIFECYCLE METHOD-UNMOUNTING:
+=================================
+import React from "react"
+import{FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+//import {} from '@fontawesome-svg-core'
+import{faGear,faEgg,faHome} from '@fortawesome/free-solid-svg-icons'
+class Child extends React.Component
+{
+  componentWillUnmount()
+  {
+    document.getElementById("res").innerHTML="<h1>Child Component Removed</h1>"
+  }
+  render()
+  {
+    return(
+      <>
+      <h1>This is child component</h1>
+      <FontAwesomeIcon icon={faGear} spin></FontAwesomeIcon>
+      <FontAwesomeIcon icon={faEgg} spin></FontAwesomeIcon>
+      <FontAwesomeIcon icon={faHome} size="lg" style={{color:"red"}} spin></FontAwesomeIcon>
+      </>
+    )
+  }
+}
+class App extends Child
+{
+  constructor()
+  {
+    super()
+    this.state={
+      show:true
+    }
+  }
+  render()
+  {
+    var com
+    const dcomponent=()=>{
+      this.setState({show:false})
+    }
+    if(this.state.show===true)
+    {
+       com=<Child/>
+    }
+    return(
+      <>
+      <h1>Unmounting - Deleted Component</h1>
+      <br></br>
+      {com}
+      <br></br>
+      <button onClick={dcomponent}>Child Component Removed</button>
+      <div id="res"></div>
+    
+      </>
+    )
+  }
+}
+export default App
+
+WEATHER REPORT:
+==============
+import axios from "axios"
+import './App.css'
+import {useState} from 'react'
+function App()
+{
+  const [city,setCity]=useState("")
+  const[output,setOutput]=useState(null)
+  const updatecity=(event)=>{
+    setCity(event.target.value)
+  }
+  const findreport=()=>{
+    document.getElementById("res1").innerHTML=""
+    const wapi=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8a0f210b4a896240d0350d0fa4616b8f`
+  console.log(wapi)
+  if(city.length>2)
+  {
+    axios.get(wapi).then((res)=>{
+      console.log(res.data)
+      setOutput(res.data)
+    }).catch((err)=>{
+      console.log(err.response.data)
+      setOutput(err.response.data)
+    }).finally(()=>{
+      document.getElementById("res2").innerHTML="====Report End===="
+    })
+  }
+  else
+  {
+    document.getElementById("res1").innerHTML="city name atleast 3 chars"
+  }
+  }
+return(
+    <>
+    
+    <h1>WEATHER REPORT</h1>
+    <input type="text" onChange={(e)=>updatecity(e)} value={city} placeholder="Enter City Name"></input>
+    <input type="button" onClick={findreport} value="Search"></input>
+     <div id="res1"></div>
+  {output!==null && output.cod===200 && <>
+  <h2>Weather Report1:{output.weather[0].main}</h2>
+  <h2>Weather Report2:{output.weather[0].description}</h2>
+  <h2>Temperature:{output.main.temp}</h2>
+  </>}
+  {output!==null && output.cod==="404" && <>
+  <h2>Result:{output.message}</h2>
+  </>}
+  <div id="res2"></div>
+    </div>
+  </>
+  )
+}
+export default App
+
+CONNECTION TO FRONTEND AND BACKEND: (APP.JS)
+==================================
+1.MONGOBD WITH NODEJS AND REACTJS:
+=================================
+import React,{ useEffect } from 'react'
+import Axios from 'axios'
+function App()
+{
+  const [list,setList]=React.useState([])
+  useEffect(()=>{
+    Axios.get("http://127.0.0.1:4000/api/gowtham").then((res)=>{
+    setList(res.data)
+    })
+  },[])
+  
+  return(
+    <>
+      <h1>Welcome to React Component</h1>
+      // <ol>
+      // {list.map((item)=><li> {item.rno} {item.name} {item.mark} </li>)}
+      // </ol>
+      <table border="2px"> 
+      {list.map((item)=><tr><td>{item.rno}</td> <td>{item.name}</td> <td>{item.mark}</td></tr>)}
+      </table>
+    </>
+  )
+}
+export default App
+
+2. MONGOBD WITH NODEJS AND REACTJS 1:
+====================================
+import React,{ useState } from 'react'
+//import Axios from 'axios'
+import axios from 'axios'
+function App()
+{
+  const [list,setList]=React.useState([])
+  const[rno,setRno]=useState(null)
+  //useEffect(()=>{
+    //Axios.get("http://127.0.0.1:4000/api/gowtham").then((res)=>{
+    //setList(res.data)
+    //})
+  //},[])
+  const callaxios=()=>{
+    //axios.get(`http://127.0.0.1:4001/api/bhuvana/${rno}`).then((res)=>{
+      axios.get(`http://127.0.0.1:4001/api/bhuvana`,{params:{myrno:rno,myname:"bhu"}}).then((res)=>{
+      setList(res.data)
+    }).catch((err)=>{
+      console.log(err)
+    })
+  }
+  const changeRno=(event)=>{
+    setRno(event.target.value)
+  }
+     
+  return(
+    <>
+      <h1>Welcome to React Component</h1>
+      <input type="text" placeholder='enter rno:' value={rno} onChange={(e)=>changeRno(e)}></input>
+      <button onClick={callaxios}>clickme</button>
+      <br></br>
+      
+        {list.length>0 && <>
+       <table border="2px"> 
+      {list.map((item)=><tr><td>{item.rno}</td> <td>{item.name}</td> <td>{item.mark}</td></tr>)}
+      </table>
+    </>
+}
+{list.length===0 && <>
+<h1>NOT FOUND</h1>
+</>}
+</>
+  )
+}
+export default App
+
+3.INSERTING ID:
+===============
+import React,{useState} from 'react'
+import Axios from 'axios'
+function App()
+{
+      const[list,setList]=React.useState(null)
+      const[rno,setRno]=useState(0)
+      const[name,setName]=useState("")
+      const[mark,setMark]=useState(0)
+     //  useEffect(()=>{
+     //       Axios.get('http://127.0.0.1:4000/api/bhuvana').then((res)=>{
+     //       setList(res.data)
+     //       })
+
+     //  },[])
+     //
+     const callaxios=()=>{
+         // Axios.get(`http://127.0.0.1:4001/api/bhuvana/${rno}`).then((res)=>{
+          Axios.get(`http://127.0.0.1:4002/api/bhuvana`,{params:{myrno:rno,myname:name,mymark:mark}}).then((res)=>{
+               setList(res.data)
+               console.log("final res",res.data)
+          }).catch((err)=>{
+               console.log(err)
+          })
+     }
+       const changeRno=(event)=>{
+           setRno(event.target.value)
+      }
+      const changeName=(event)=>{
+           setName(event.target.value)
+      }
+      const changeMark=(event)=>{
+           setMark(event.target.value)
+      }
+  return(
+       <>
+            <h1>welcome to React component</h1>
+          <input type="text" placeholder="enter rno" value={rno} onChange={(e)=>changeRno(e)}></input><br></br>
+          <input type="text" placeholder="enter name" value={name} onChange={(e)=>changeName(e)}></input><br></br>
+          <input type="text" placeholder="enter mark" value={mark} onChange={(e)=>changeMark(e)}></input><br></br>
+          <button onClick={callaxios}>clickme</button>
+          <br></br>
+          {list!==null && <>
+               object id:{list.insertedId}
+               <br></br>
+               acknowledged:{list.acknowledged}
+          </>}
+       </>
+  )
+}
+export default App
+
+4.DELETED ID:
+============
+import React,{useState} from 'react'
+import Axios from 'axios'
+function App()
+{
+      const[list,setList]=React.useState(null)
+      const[rno,setRno]=useState(0)
+      //const[name,setName]=useState("")
+      //const[mark,setMark]=useState(0)
+     //  useEffect(()=>{
+     //       Axios.get('http://127.0.0.1:4000/api/bhuvana').then((res)=>{
+     //       setList(res.data)
+     //       })
+
+     //  },[])
+     //
+     const callaxios=()=>{
+         // Axios.get(`http://127.0.0.1:4001/api/bhuvana/${rno}`).then((res)=>{
+          Axios.get(`http://127.0.0.1:4003/api/bhuvana`,{params:{myrno:rno}}).then((res)=>{
+               setList(res.data)
+               console.log("final res",res.data)
+          }).catch((err)=>{
+               console.log(err)
+          })
+     }
+       const changeRno=(event)=>{
+           setRno(event.target.value)
+      }
+      /*const changeName=(event)=>{
+           setName(event.target.value)
+      }
+      const changeMark=(event)=>{
+           setMark(event.target.value)
+      }
+  return(
+       <>
+            <h1>welcome to React component</h1>
+          <input type="text" placeholder="enter rno" value={rno} onChange={(e)=>changeRno(e)}></input><br></br>
+          {/* <input type="text" placeholder="enter name" value={name} onChange={(e)=>changeName(e)}></input><br></br> 
+          {/* <input type="text" placeholder="enter mark" value={mark} onChange={(e)=>changeMark(e)}></input><br></br> 
+          <button onClick={callaxios}>clickme</button>
+          <br></br>
+          {list!==null && list.deletedCount>0 &&
+               <>
+                 <h1>successfully deleted</h1>
+               </>
+               
+          }
+          {list!==null && list.deletedCount===0 &&
+          <>
+          <h1>Not deleted!!! pls check rno or rno not found in db</h1>
+          </>
+          }
+          
+       </>
+  )
+}
+export default App
+
+DELETED ID 1:
+============
+import React,{useState} from 'react'
+import Axios from 'axios'
+function App()
+{
+      const[list,setList]=React.useState(null)
+      const[rno,setRno]=useState(0)
+      const callaxios=()=>{
+        Axios.get(`http://127.0.0.1:4003/api/bhuvana`,{params:{rno:rno}}).then((res)=>{
+               setList(res.data)
+               console.log("final res",res.data)
+          }).catch((err)=>{
+               console.log(err)
+          })
+     }
+       const changeRno=(event)=>{
+           setRno(event.target.value)
+      }
+      return(
+        <>
+             <h1>welcome to React component</h1>
+           <input type="text" placeholder="enter rno" value={rno} onChange={(e)=>changeRno(e)}></input><br></br>
+           <button onClick={callaxios}>clickme</button>
+          <br></br>
+          {list!==null && list.deletedCount>0 &&
+               <>
+                 <h1>successfully deleted</h1>
+               </>
+               
+          }
+          {list!==null && list.deletedCount===0 &&
+          <>
+          <h1>Not deleted!!! pls check rno or rno not found in db</h1>
+          </>
+          }
+          
+       </>
+  )
+}
+export default App
+
+5.UPDATED ID:
+============
+import React,{useState} from 'react'
+import Axios from 'axios'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { } from '@fortawesome/fontawesome-svg-core'
+import {faMagnifyingGlassLocation} from '@fortawesome/free-solid-svg-icons'
+function App()
+{
+      const[list,setList]=React.useState(null)
+      const[rno,setRno]=useState()
+      const[name,setName]=useState()
+      const[mark,setMark]=useState()
+      const[readOnly,setReadOnly]=useState(true)
+      const callaxios=()=>{
+        Axios.get(`http://127.0.0.1:4004/api/bhuvana`,{params:{rno:rno}}).then((res)=>{
+               setList(res.data)
+               console.log("final res",res.data)
+               //document.getElementById("u").value=res.data.name
+               //document.getElementById("k").value=res.data.mark
+            //  if(readOnly===true) 
+            //  document.getElementById("re").value=res.data
+            // else
+            // document.getElementById("re").value=" " 
+            setName(res.data.name)
+            setMark(res.data.mark)
+          }).catch((err)=>{
+               console.log(err) 
+          })
+     }
+     const updates=()=>{
+      Axios.get(`http://127.0.0.1:4005/api/bhuvana`,{params:{rno:rno,name:name,mark:mark}}).then((res)=>{
+             setList(res.data)
+             console.log("final res",res.data)
+            }).catch((err)=>{
+              console.log(err) 
+         })
+    }
+     const enable=()=>{
+      setReadOnly(!readOnly)
+     }
+     
+     
+       const changeRno=(event)=>{
+           setRno(event.target.value)
+      }
+            const changeName=(event)=>{
+           setName(event.target.value)
+      }
+      const changeMark=(event)=>{
+           setMark(event.target.value)
+      }
+      // const changeEnable=(event)=>{
+        // setEnable(event.target.value)
+      // }
+      return(
+        <>
+             <h1>welcome to React component</h1>
+           <input type="text" placeholder="enter rno" value={rno} onChange={(e)=>changeRno(e)}></input>
+           <FontAwesomeIcon icon={faMagnifyingGlassLocation} size='1x' style={{color:"blue"}} onClick={callaxios} value="search"></FontAwesomeIcon><br></br>
+           <input type="text" placeholder="enter rno"  id="u" value={name} onChange={(e)=>changeName(e)} readOnly={readOnly}></input><br></br>
+           <input type="text" placeholder="enter rno" id="k" value={mark} onChange={(e)=>changeMark(e)} readOnly={readOnly}></input><br></br>
+           {/* <button onClick={callaxios}>search</button> */}
+            <button onClick={enable}>enable</button>
+            <button onClick={updates}>update</button>  
+           {/* <button>search</button> */}
+          <br></br>
+          {list!==null && list.deletedCount>0 &&
+               <>
+                 <h1>successfully deleted</h1>
+               </>
+               
+          }
+          {list!==null && list.deletedCount===0 &&
+          <>
+          <h1>Not deleted!!! pls check rno or rno not found in db</h1>
+          </>
+          }
+          
+       </>
+  )
+}
+export default App
+
+INDEX.JS:
+========
+import React from 'react';
+//import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+//import Bhuvana from './App';
+//import Muthu from './App';
+import reportWebVitals from './reportWebVitals';
+
+/*const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>*/
+//);
+//var rno=10
+//var cend="31-dec-2023"
+//ReactDOM.render(<App data={rno} name="bhuvana" date={cend} enddate1="31-jan-2024"/>,document.getElementById("root"))
+/*var stud={
+  
+    rno:10,
+    name:"bhuvana",
+    mark:{ 
+     tamil:98,
+    eng:99,
+    mat:100,
+    sci:99,
+    soc:97
+   
+}
+}
+
+/*var stud={
+  rno:11,
+  name:"bhuvana",
+  mark:{tamil:98,
+  eng:99,
+  mat:100,
+  sci:98,
+  soc:97
+}
+}*/
+/*
+var a={
+  rno:21,
+  name:'bhuvi',
+  mark:100
+}*/
+ReactDOM.render(<App/>,document.getElementById("root"))
+//ReactDOM.render(<App mydata={stud}></App>,document.getElementById("root"))
+//var a=10
+//var b=20
+//var ans=<>
+//<h1 className="nithu">Bhuvana</h1>
+/*var ans=<><h1>welcome to JSX</h1>
+<h1>veg</h1>
+<h2>Flower</h2>
+<h1>Total:{a+b}</h1>
+</>
+//var ans=<h2> Fruits</h2>
+ReactDOM.render(ans,document.getElementById("root"))*/
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+APP.CSS:
+=======
+*{
+  background-color: blue
+}
+h1
+{
+  margin-left: 295px;
+  color:blue;
+  background-color: aqua;
+  width: 300px;
+  border-radius: 30px;
+  text-align: center;
+}
+div{
+  
+  height: 100px;
+  top:200px;
+  border: 5px;
+}
+#s
+{
+  margin-left: 330px;
+  margin-top: 60px;
+  color:blue;
+}
+input
+{
+ color: black;
+ background-color: white;
+ border-radius: 40px;
+ text-align: center;
+ 
+}
+input:hover
+{
+ color: blue;
+ background-color: aqua;
+ border-radius: 40px;
+ text-align: center;
+ 
+}
+/*h1{
+  background-color:red;
+  width:500px;
+
+}
+input{
+ color:blue;
+ position: absolute;
+ left: 300px;
+ }*/
+/*#myimg
+{
+  border-radius: 50%;
+  border:10px double red;
+  box-shadow: 5px 10px 10px 4px black;
+}*/
+
+PROJECT- WEATHER REPORT:
+=======================
+APP.JS:
+======
+import axios from "axios"
+import img1 from './images/st.jpg'
+import img2 from './images/sun.jpg'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faMagnifyingGlassLocation} from '@fortawesome/free-solid-svg-icons'
+import './App.css'
+import {useState} from 'react'
+function App()
+{
+  const [city,setCity]=useState("")
+  const[output,setOutput]=useState(null)
+  const updatecity=(event)=>{
+    setCity(event.target.value)
+  }
+  const findreport=()=>{
+    document.getElementById("res1").innerHTML=""
+    const wapi=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8a0f210b4a896240d0350d0fa4616b8f`
+  console.log(wapi)
+  if(city.length>2)
+  {
+    axios.get(wapi).then((res)=>{
+      console.log(res.data)
+      setOutput(res.data)
+    }).catch((err)=>{
+      console.log(err.response.data)
+      setOutput(err.response.data)
+    })
+  }
+  else
+  {
+    document.getElementById("res1").innerHTML="city name atleast 3 chars"
+  }
+  }
+return(
+    <>
+    
+      <img src={img1} id="u" alt="path error"></img>  
+      <img src={img2} id="a" alt="path error"></img>
+    <div id="o">
+    <input type="text" onChange={(e)=>updatecity(e)} value={city} placeholder="Enter City Name"></input>
+    <FontAwesomeIcon id="r" onClick={findreport} icon={faMagnifyingGlassLocation} size="2xl"></FontAwesomeIcon>
+    <div id="res1"></div>
+     {output!==null && output.cod===200 && <>
+     <p>WEATHER REPORT</p>
+     <h2>{output.weather[0].description}</h2>
+     <h3>TEMP:{output.main.temp}</h3>
+    <b>HUMIDITY:{output.main.humidity}°C</b>
+    <strong>PRESSURE:{output.main.pressure}</strong>
+    
+    
+  </>}
+  {output!==null && output.cod==="404" && <>
+  <h4>{output.message}</h4>
+  </>}
+  </div>
+</>
+  )
+}
+export default App
+
+INDEX.JS:
+========
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+APP.CSS:
+=======
+#o
+{
+  position:absolute;
+  top:50px;
+  left:300px;
+  background-image: url("./images/st.jpg");
+  background-size:cover ;
+  height: 350px;
+  width: 350px;
+  text-align: center;
+  opacity: .7;
+  color:white;
+  border-radius: 30px;
+}
+p
+{
+ font-size:larger ;
+ color: whitesmoke;
+ text-align: center;
+ margin-left: 10px;
+}
+h2
+{
+ position: absolute;
+ margin-top: 30px;
+ margin-left: 100px;
+}
+h3
+{
+  position: absolute;
+  margin-top: 160px;
+  margin-left: 10px;
+  font-style: italic;
+}
+h4
+{
+margin-left: 10px;
+top: 700px;
+color: white;
+}
+b
+{
+  position: absolute;
+  margin-top: 120px;
+  margin-left: -60px;
+  font-style: italic;
+}
+strong
+{
+  position: absolute;
+  margin-top: 160px;
+  margin-left: 40px;
+  font-style: italic;
+}
+#r
+{
+  height: 20px;
+  width: 20px;
+  border-radius: 30px;
+  margin-left: 10px;
+  margin-top: 20px;
+  color:white;
+}
+#r:hover
+{
+  height: 20px;
+  width: 20px;
+  border-radius: 30px;
+  margin-left: 10px;
+  margin-top: 20px;
+  color:violet;
+}
+input
+{
+  margin-left:20px;
+  border-radius: 50px;
+  text-align: center;
+  height: 20px;
+  width:180px;
+  opacity: .9;
+  background-color: white;
+  color: black;
+}
+input:hover
+{
+  margin-left:20px;
+  border-radius: 50px;
+  text-align: center;
+  height: 20px;
+  width:180px;
+  opacity: .9;
+  background-color: violet;
+  color: red;
+}
+#u
+{
+  width: 100%;
+  height: 750px;
+}
+#a
+{
+  width:80px;
+  height:80px;
+  position: relative;
+  top:-600px;
+  margin-left: 440px;
+  
+}
+
+EXTRA THING:
+===========
+MYCSS:
+=====
+p
+{
+    border:5px solid blue;
+    background-color: rgba(11,113,133,.9);
+}
+img
+{
+    border-radius: 50px;
+}
+
+USER COMPONENT:
+==============
+IMG.JS:
+======
+var a = require("../images/img1.jpg")
+var b = require("../images/apple.jpg")
+var c = require("../images/watch.jpg")
+export{a,b,c}
+
+INVALID.JS:
+==========
+function App()
+{
+    return(
+        <>
+        <h1>InValid User</h1>
+        </>
+    )
+}
+export default App
+
+VALID.JS:
+========
+function App()
+{
+    return(
+        <>
+        <h1>Valid User</h1>
+        </>
+    )
+}
+export default App
+
+NAMED.JS:
+========
+export var m1=100
+export var m2=99
+export var m3=97
+export var m4=98
+export var m5=95
+//all at once bottom
+var tamil=99
+var eng=88
+var mat=100
+export {tamil,eng,mat}
+
+  
+ 
+
+  
+  
+
+
+
+  
+  
+ 
+  
+  
+
